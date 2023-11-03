@@ -1,5 +1,6 @@
 import { useState} from 'react'
 import './mybody.css';
+import Navbar from './Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChevronDown, faChevronUp} from '@fortawesome/free-solid-svg-icons'
 import {faChevronRight} from '@fortawesome/free-solid-svg-icons'
@@ -14,6 +15,8 @@ export default function Mybody(props) {
 return(
   <>
 <div className='mainBody'>
+<Navbar title="TrekCompanion" company="Company" help="Help" explore="Explore"/>
+
 </div>
   </>
 )
