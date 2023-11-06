@@ -1,21 +1,70 @@
-.mainForm{
-    position: absolute;
-    left: 2px;
-    top: 60px;
-    background-color: white;
-    height:90vh;
-    width:100%;
+*{
+    margin: 0;
+    padding: 0;
+}
+.loginPage{
+    width: 100vw;
+    height: 100vh;
+}
+.loginContainer {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+
+.loginContainer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: large;
+    border-radius: 8px;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.createNewAcc{
+    color: white;
+    background-color: #039227;
+    font-size: medium;
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px;
+    margin-left: 110px;
+   
+}
+.createNewAcchover{
+    background-color:  #03701e;
+}
+
+.loginButton{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    justify-items: center;
-   }
-   
-.mainForm .signup-form{
-    border-radius:20px;
+    flex-direction: column;
+
 }
-   
-.mainForm .login-form{
-    border-radius:10px;
-}
-   

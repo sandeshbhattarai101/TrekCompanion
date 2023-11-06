@@ -15,17 +15,26 @@ import {
 function App() {
 
   return (
-    <>
+<>
 <Router>
-<Mybody/>
-<Footer/>
-
-
+<Routes>
+  
+  
+  <Route exact path='/' element={
+  <>
+  <Mybody/>
+  <Footer/>
+  </>
+    }/>
+  <Route exact path='/loginForm' element={<Login/>}/>
+  <Route exact path='/signupForm' element={<Signup/>}/>
+ 
+</Routes>
 
 </Router>
 
 </>
   )
-}
+  }
 
 export default App

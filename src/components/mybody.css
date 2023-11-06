@@ -8,6 +8,41 @@
   background-image: url("../../images/bodywallpaper.jpg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
-  
+  background-size: cover;  
 }
+.mainContainer{
+  display: flex;
+  flex-direction:column;
+  margin-top: 50px;
+  margin-left: 30px;
+  background-color: rgba(186, 203, 218, 0.637);
+  width:680px;
+  height: 250px;
+  padding: 30px;
+  border-radius: 20px;
+}
+.mainContainer p h3{
+margin-top: 20px;
+margin-left: 5px;
+
+}
+
+.subContainer{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top:30px ;
+
+}
+
+.bodyBtn{
+background-color: black;
+width: 300px;
+margin: 4px;
+}
+
+.bodyButton{
+color: white;
+}
+
+

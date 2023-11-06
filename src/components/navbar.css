@@ -31,7 +31,7 @@ right: 50px;
     font-size: large;
    
 }
-.btn{
+.navbarBtn{
     height: fit-content;
     width: fit-content;
     margin-left:50px;
@@ -67,19 +67,57 @@ right: 50px;
 
 }
 .loginBtn{
-  background-color: grey;
+  background-color: rgb(71, 71, 71);
   width:90px;
   padding: 5px;
+  border-radius: 20px;
 }
 .login{
     color: white;
 }
 
 .signupBtn{
-    background-color:grey;
+    background-color:rgb(71, 71, 71);
     width: 90px;
     padding: 5px;
+    border-radius: 20px;
 }
 .signup{
     color: white;
 }
+
+
+/* popup login-signup */
+
+.bodyPopup{
+    position: absolute;
+    left: 3px;
+    top: 58px;
+    background-color: white;
+    height:90vh;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    z-index: 1;
+    
+  }
+  .popButton{
+    color: black;
+    font-size: xx-large;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding-bottom: 40px;
+    border-radius:0;
+}
+.bodyPopup .arrow2{
+    padding-left: 50px;
+}
+ .closeButton{
+    position:absolute;
+    top: 60px;
+    right: 80px;
+    height: 30px;
+ } 

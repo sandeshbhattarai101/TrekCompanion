@@ -16,8 +16,21 @@ return(
   <>
 <div className='mainBody'>
 <Navbar title="TrekCompanion" company="Company" help="Help" explore="Explore"/>
+  <div className='mainContainer'>
+  <p className="paragraph">
+        <h1>Guide with us and get paid.</h1>
+
+        <h3>Guide on the platform with largest network of tourists.</h3>
+    </p>
+    <div className="subContainer">
+      <button className='bodyBtn'><Link className=' bodyButton earnBtn ' >Earn with TrekCompanion <FontAwesomeIcon className="bodyArrow fontAwesomeIcon"   icon={faArrowRight} /></Link></button>
+      <button className='bodyBtn'><Link  className=' bodyButton trekBtn ' >Trek with TrekCompanion <FontAwesomeIcon className="bodyArrow fontAwesomeIcon"   icon={faArrowRight} /></Link></button>
+    </div> 
+    </div>
+
 
 </div>
+    
   </>
 )
 }

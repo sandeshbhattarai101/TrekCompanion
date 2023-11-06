@@ -17,9 +17,26 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
 const[isOpen, setIsOpen] = useState(false)
+const[popup, setPopup] = useState(false)
+const[text, setText]= useState("");
+const[data, setData]= useState("");
 
-const handleclick = ()=>{
+const handleClick = ()=>{
   setIsOpen(!isOpen)
+
+}
+const handleLogin = ()=>{
+  setPopup(!popup);
+  setText("Log in");
+  setData("/loginForm");
+}
+const handleSignup = ()=>{
+  setPopup(!popup);
+  setText("Sign up");
+  setData("/signupForm");
+}
+const handleClose = ()=>{
+  setPopup(false);
 }
 
     return(
@@ -30,7 +47,7 @@ const handleclick = ()=>{
 <Link className="navbarLogo" >{props.title}</Link>
    <div className='navbarLeft'>
     <div className='dropdown'>
-   <button className='btn' onClick={handleclick}><Link className="navbarButton " href="#">{props.company} </Link>
+   <button className='navbarBtn' onClick={handleClick}><Link className="navbarButton " href="#">{props.company} </Link>
     {!isOpen ? (
        <FontAwesomeIcon className="fontAwesomeIcon fontawesomeDown" icon={faChevronDown}/>
     ): (<FontAwesomeIcon className="fontAwesomeIcon fontawesomeUp" icon={faChevronUp}/>)}
@@ -46,14 +63,22 @@ const handleclick = ()=>{
     </div>
     
 
-  <button className='btn' ><Link className="navbarButton " href="#">{props.help}</Link></button>  
+  <button className='navbarBtn' ><Link className="navbarButton " href="#">{props.help}</Link></button>  
   </div>
 <div className="navbarRight">
-    <button className='btn loginBtn'><Link className="navbarButton login" href="#">Log in</Link></button>
-    <button className='btn signupBtn'><Link className="navbarButton signup" href="#">Sign up</Link></button>
+    <button className='navbarBtn loginBtn' onClick={handleLogin}><Link className="navbarButton login" to="/" >Log in</Link></button>
+    <button className='navbarBtn signupBtn' onClick={handleSignup}><Link className="navbarButton signup" to="/">Sign up</Link></button>
 
 </div>
-</nav>
+    {/* popup login-signup page */}
+    {popup?
+<div className="bodyPopup">
+   <FontAwesomeIcon className="closeButton" onClick={handleClose} icon={faCircleXmark} />
+  <Link className="popButton popEarn" to={data} onClick={handleClose} >{text} to guide & earn <FontAwesomeIcon className= "arrow2"  icon={faArrowRight} /></Link>
+  <Link className="popButton popTrek" to={data} onClick={handleClose} >{text} to trek with us <FontAwesomeIcon className= "arrow2"  icon={faArrowRight} /></Link>
+  </div>:""}
+
+  </nav>
  </>
 
 )   
