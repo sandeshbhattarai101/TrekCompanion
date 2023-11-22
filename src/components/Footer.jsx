@@ -13,7 +13,7 @@ export default function Footer() {
     <ul className="footerUl Footer-Company">
     <li className="footer-main">Company</li>
     <li><Link className="footer-item" to="/">About us</Link></li>
-    <li><Link className="footer-item" to="/">Our offerings</Link></li>
+    <li><Link className="footer-item" to="/contact">Contact us</Link></li>
     <li><Link className="footer-item" to="/">How TrekCompanion works</Link></li>
     </ul>
 
@@ -21,7 +21,6 @@ export default function Footer() {
     <li className="footer-main">Contact</li>
     <li><Link className="footer-item" to="/">Safety</Link></li>
     <li><Link className="footer-item" to="/">Help</Link></li>
-    <li><Link className="footer-item" to="/">Contact us</Link></li>
     </ul>
 
     </div>

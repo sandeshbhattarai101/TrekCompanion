@@ -44,7 +44,7 @@ const handleClose = ()=>{
        
 <nav className="navbar">
 
-<Link className="navbarLogo" >{props.title}</Link>
+<Link className="navbarLogo" to="/">{props.title}</Link>
    <div className='navbarLeft'>
     <div className='dropdown'>
    <button className='navbarBtn' onClick={handleClick}><Link className="navbarButton " href="#">{props.company} </Link>
@@ -56,7 +56,8 @@ const handleClose = ()=>{
     <div className='companyUl'>
     <ul>
     <li className='companyLi'><Link className="companyItems" href="#">About us</Link></li>
-    <li className='companyLi'><Link className="companyItems" href="#">Contact us</Link></li>
+    <li className='companyLi'><Link className="companyItems" to="/contact">Contact us</Link></li>
+    <li className='companyLi'><Link className="companyItems" href="#">How TrekCompanion works</Link></li>
     </ul>
     </div>
     )} 
@@ -66,8 +67,8 @@ const handleClose = ()=>{
   <button className='navbarBtn' ><Link className="navbarButton " href="#">{props.help}</Link></button>  
   </div>
 <div className="navbarRight">
-    <button className='navbarBtn loginBtn' onClick={handleLogin}><Link className="navbarButton login" to="/" >Log in</Link></button>
-    <button className='navbarBtn signupBtn' onClick={handleSignup}><Link className="navbarButton signup" to="/">Sign up</Link></button>
+    <button className='navbarBtn loginBtn' onClick={handleLogin}><Link className="navbarButton login" to="#" >Log in</Link></button>
+    <button className='navbarBtn signupBtn' onClick={handleSignup}><Link className="navbarButton signup" to="#">Sign up</Link></button>
 
 </div>
     {/* popup login-signup page */}

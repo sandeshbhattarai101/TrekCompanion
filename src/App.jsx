@@ -4,6 +4,8 @@ import Mybody from './components/Mybody';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
+import Navbar from './components/Navbar';
 
 import {
   BrowserRouter as Router,
@@ -26,8 +28,15 @@ function App() {
   <Footer/>
   </>
     }/>
+  <Route exact path='/contact' element={
+  <>
+  <Contact/>
+  <Footer/>
+  </>
+    }/>
   <Route exact path='/loginForm' element={<Login/>}/>
   <Route exact path='/signupForm' element={<Signup/>}/>
+  <Route exact path='/contact' element={<Contact/>}/>
  
 </Routes>
 

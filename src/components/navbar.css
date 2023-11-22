@@ -58,12 +58,14 @@ right: 50px;
     background-color:rgb(212, 211, 211); ;
 }
 
+
 .companyUl ul{
     margin-top: 2px;
     border: black  1px;
     margin-left: 50px;
     background-color:rgb(238, 236, 236);
     list-style-type: none;
+
 
 }
 .loginBtn{

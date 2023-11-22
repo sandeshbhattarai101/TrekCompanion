@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;  
 }
-.mainContainer{
+.mainBodyContainer{
   display: flex;
   flex-direction:column;
   margin-top: 50px;
@@ -21,13 +21,13 @@
   padding: 30px;
   border-radius: 20px;
 }
-.mainContainer p h3{
+.mainBodyContainer p h3{
 margin-top: 20px;
 margin-left: 5px;
 
 }
 
-.subContainer{
+.subBodyContainer{
   display: flex;
   flex-direction: column;
   position: relative;
