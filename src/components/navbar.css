@@ -71,14 +71,17 @@ right: 180px;
 
 
 .companyUl ul{
-    margin-top: 2px;
+    width: 300px;
     border: black  1px;
-    margin-left: 50px;
     background-color:white;
     list-style-type: none;
+    font-size: large;
     position: absolute;
     padding: 10px;
-  box-shadow: 4px 4px 4px #8a898962
+    padding-left: 20px;
+    top: 44px;
+    left: 30px;
+    box-shadow: 4px 4px 4px #8a898962
 
 }
 .loginBtn{
