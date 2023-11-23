@@ -1,6 +1,5 @@
 import { useState} from 'react'
 import './mybody.css';
-import Navbar from './Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChevronDown, faChevronUp} from '@fortawesome/free-solid-svg-icons'
 import {faChevronRight} from '@fortawesome/free-solid-svg-icons'
@@ -10,7 +9,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 
 
-export default function Mybody(props) {
+export default function Mybody() {
 
 return(
   <>

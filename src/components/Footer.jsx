@@ -12,7 +12,7 @@ export default function Footer() {
     <div className="main-items">
     <ul className="footerUl Footer-Company">
     <li className="footer-main">Company</li>
-    <li><Link className="footer-item" to="/">About us</Link></li>
+    <li><Link className="footer-item" to="/about">About us</Link></li>
     <li><Link className="footer-item" to="/contact">Contact us</Link></li>
     <li><Link className="footer-item" to="/">How TrekCompanion works</Link></li>
     </ul>

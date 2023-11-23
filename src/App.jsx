@@ -6,7 +6,7 @@ import Signup from './components/Signup';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
-
+import About from './components/About';
 
 import {
   BrowserRouter as Router,
@@ -29,6 +29,7 @@ function App() {
   <Route exact path='/contact' element={<Contact/>}/>
   <Route exact path='/loginForm' element={<Login/>}/>
   <Route exact path='/signupForm' element={<Signup/>}/>
+  <Route exact path='/about' element={<About/>}/>
   
 </Routes>
 

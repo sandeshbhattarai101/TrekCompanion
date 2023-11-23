@@ -21,7 +21,8 @@ const[popup, setPopup] = useState(false)
 const[text, setText]= useState("");
 const[data, setData]= useState("");
 
-const handleClick = ()=>{
+
+ const handleClick = ()=>{
   setIsOpen(!isOpen)
 
 }
@@ -42,7 +43,7 @@ const handleClose = ()=>{
     return(
        <>
        
-<nav className="navbar">
+<nav className="navbar" >
 
 <Link className="navbarLogo" to="/">{props.title}</Link>
    <div className='navbarLeft'>
@@ -55,7 +56,7 @@ const handleClose = ()=>{
     {isOpen && (
     <div className='companyUl'>
     <ul>
-    <li className='companyLi'><Link className="companyItems" href="#">About us</Link></li>
+    <li className='companyLi'><Link className="companyItems" to="/about">About us</Link></li>
     <li className='companyLi'><Link className="companyItems" to="/contact">Contact us</Link></li>
     <li className='companyLi'><Link className="companyItems" href="#">How TrekCompanion works</Link></li>
     </ul>
