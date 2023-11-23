@@ -9,7 +9,6 @@ export default function Contact(props){
 return(
     <>
 
-    <div className='mainContact'>
 
     <div className='mainContactContainer'>
     <div className='mainContactHeading'>
@@ -22,14 +21,14 @@ return(
         <form action="/contactus" method='post'>
            
             <label htmlFor="name"> <b>Your Name</b></label>
-            <input type="text" name='name' id='name' placeholder='Enter your name' required/>
+            <input type="text" name='name' id='name' placeholder=' Enter your name' required/>
 
             <label htmlFor="email"><strong>Email Address</strong></label>
-            <input type="email" name='email' id='email' placeholder='Enter your email address' required />
+            <input type="email" name='email' id='email' placeholder=' Enter your email address' required />
            
         
             <label htmlFor="number"><strong>Mobile Number</strong></label>
-            <input type="number" name='number' id='number' placeholder='01xxxxxxxxx'/>
+            <input type="text" name='number' id='number' placeholder=' +977 98xxxxxxxx'/>
        
            
             
@@ -54,8 +53,6 @@ return(
     <li><strong>Email:</strong> TrekCompanion@gmail.com</li>
     </div>
 </ul>
-</div>
-
 </div>
 
 </div>

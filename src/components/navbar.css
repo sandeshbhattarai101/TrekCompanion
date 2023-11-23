@@ -5,11 +5,13 @@
 .navbar{
     display: flex;
     top: 0;
-    background-color: white;
+    width: 100vw;
+    z-index: 1;
+    background-color: rgb(218, 214, 214);
     position: sticky;
-    /* height: 2px; */
-    padding: 10px;
-  box-shadow: 4px 4px 4px #8a898962
+    padding: 15px;
+    padding-left: 8%;
+   box-shadow: 4px 4px 4px #8a898962
   
 
 
@@ -18,13 +20,14 @@
 
 .navbarLeft{
 display: flex;
-left: 200px;
+position: absolute;
+left: 300px;
 }
 
 .navbarRight{
 display: flex;
 position: absolute;
-right: 50px;
+right: 180px;
 } 
 
 .navbarLogo{

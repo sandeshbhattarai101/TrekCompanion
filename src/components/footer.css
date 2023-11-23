@@ -1,12 +1,17 @@
 
 .main-Footer{
+
 background-color: black;
 color: whitesmoke;  
-
+position: absolute;
+left: 20px;
 
 }
+
 .main-container{
-    margin-left: 75px;
+    margin-top: 20px;
+    margin-left: 100px;
+    width: 100vw;
 
 }
 .main-logo{
