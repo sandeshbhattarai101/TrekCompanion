@@ -1,7 +1,7 @@
 import React from 'react'
 import "./contact.css"
 import Navbar from './Navbar'
-
+import Footer from './Footer'
 
 
 export default function Contact(props){
@@ -10,7 +10,6 @@ return(
     <>
 
     <div className='mainContact'>
-    <Navbar title="TrekCompanion" company="Company" help="Help" explore="Explore"/>
 
     <div className='mainContactContainer'>
     <div className='mainContactHeading'>

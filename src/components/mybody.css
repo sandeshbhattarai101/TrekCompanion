@@ -5,16 +5,17 @@
 .mainBody{
   height: 100vh;
   width: 100 vw;
-  background-image: url("../../images/bodywallpaper.jpg");
-  background-position: center center;
+  background-image: url(../.././public/images/bodywallpaper.jpg);
+  background-position:center;
   background-repeat: no-repeat;
-  background-size: cover;  
+
 }
-.mainBodyContainer{
+.mainBodyContainer {
   display: flex;
   flex-direction:column;
-  margin-top: 50px;
-  margin-left: 30px;
+  position: absolute;
+  top: 150px;
+  left: 100px;
   background-color: rgba(186, 203, 218, 0.637);
   width:680px;
   height: 250px;

@@ -15,7 +15,6 @@ export default function Mybody(props) {
 return(
   <>
 <div className='mainBody'>
-<Navbar title="TrekCompanion" company="Company" help="Help" explore="Explore"/>
   <div className='mainBodyContainer'>
   <p className="bodyParagraph">
         <h1>Guide with us and get paid.</h1>

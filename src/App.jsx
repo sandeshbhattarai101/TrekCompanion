@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 
+
 import {
   BrowserRouter as Router,
   Route,
@@ -14,33 +15,26 @@ import {
 } from "react-router-dom";
 
 
+
+
 function App() {
 
   return (
-<>
+    <>
 <Router>
+ <Navbar title="TrekCompanion" company="Company" help="Help" explore="Explore"/>
 <Routes>
   
-  
-  <Route exact path='/' element={
-  <>
-  <Mybody/>
-  <Footer/>
-  </>
-    }/>
-  <Route exact path='/contact' element={
-  <>
-  <Contact/>
-  <Footer/>
-  </>
-    }/>
+  <Route exact path='/' element={<Mybody/>}/>
+  <Route exact path='/contact' element={<Contact/>}/>
   <Route exact path='/loginForm' element={<Login/>}/>
   <Route exact path='/signupForm' element={<Signup/>}/>
-  <Route exact path='/contact' element={<Contact/>}/>
- 
+  
 </Routes>
 
+<Footer/>
 </Router>
+
 
 </>
   )
