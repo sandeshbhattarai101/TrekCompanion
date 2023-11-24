@@ -21,21 +21,21 @@ export default function About() {
         <div className="column">
             <div className="card" >
                <div className="container">
-               <img src='../../public/images/sandesh.jpg' alt="Team Member 1"/>
+               <img src='../../images/sandesh.jpg' alt="Team Member 1"/>
                    <p className="title">Founder</p>
                    <p><strong>SANDESH BHATTARAI</strong></p>
                    <p><strong>sandeshbhattarai6@gmail.com</strong></p>
                    <p><button className="button">Contact</button></p>
                </div>
                <div className="container">
-               <img src='../../public/images/sandip.jpg' alt="Team Member 1"/>
+               <img src='../../images/sandip.jpg' alt="Team Member 1"/>
                    <p className="title">Founder</p>
                    <p><strong>SANDIP REGMI BAGALE</strong> </p>
                    <p><strong>sandip.bagale34@gmail.com</strong></p>
                    <p><button className="button">Contact</button></p>
                </div>
                <div className="container">
-               <img src='../../public/images/binit.jpg' alt="Team Member 1"/>
+               <img src='../../images/binit.jpg' alt="Team Member 1"/>
                    <p className="title">Founder</p>
                    <p><strong>BINIT GAUTAM</strong></p>
                    <p><strong>binitgautam911@gmail.com</strong></p>

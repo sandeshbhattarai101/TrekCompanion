@@ -20,7 +20,6 @@ export default function Footer() {
     <li className="footer-main">Help</li>
     <li><Link className="footer-item" to="/contact">Send a message</Link></li>
     </ul>
-
     </div>
     <div className="download-logo">
     <Link to="/"><img src="images/googleplay.png" alt="google play"className="playlogo"/></Link>
