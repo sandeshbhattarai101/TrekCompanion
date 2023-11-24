@@ -14,13 +14,11 @@ export default function Footer() {
     <li className="footer-main">Company</li>
     <li><Link className="footer-item" to="/about">About us</Link></li>
     <li><Link className="footer-item" to="/contact">Contact us</Link></li>
-    <li><Link className="footer-item" to="/">How TrekCompanion works</Link></li>
     </ul>
 
     <ul className="footerUl Footer-Contact">
-    <li className="footer-main">Contact</li>
-    <li><Link className="footer-item" to="/">Safety</Link></li>
-    <li><Link className="footer-item" to="/">Help</Link></li>
+    <li className="footer-main">Help</li>
+    <li><Link className="footer-item" to="/contact">Send a message</Link></li>
     </ul>
 
     </div>

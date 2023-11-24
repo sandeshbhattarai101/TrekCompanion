@@ -3,12 +3,7 @@ import './navbar.css';
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChevronDown, faChevronUp} from '@fortawesome/free-solid-svg-icons'
-import {faChevronRight} from '@fortawesome/free-solid-svg-icons'
-import {faHouse} from '@fortawesome/free-solid-svg-icons'
-import {faBed} from '@fortawesome/free-solid-svg-icons'
-import {faPlane} from '@fortawesome/free-solid-svg-icons'
-import {faUtensils} from '@fortawesome/free-solid-svg-icons'
-import {faFutbol} from '@fortawesome/free-solid-svg-icons'
+import {faMessage} from '@fortawesome/free-solid-svg-icons'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import {faCircleXmark} from '@fortawesome/free-solid-svg-icons'
 import PropTypes from 'prop-types'
@@ -16,14 +11,19 @@ import { Link } from 'react-router-dom';
 
 
 export default function Navbar(props) {
-const[isOpen, setIsOpen] = useState(false)
+const[companyIsOpen, setCompanyIsOpen] = useState(false)
+const[helpIsOpen, setHelpIsOpen] = useState(false)
 const[popup, setPopup] = useState(false)
 const[text, setText]= useState("");
 const[data, setData]= useState("");
 
 
- const handleClick = ()=>{
-  setIsOpen(!isOpen)
+ const handleClickCompany = ()=>{
+  setCompanyIsOpen(!companyIsOpen)
+
+}
+ const handleClickHelp = ()=>{
+  setHelpIsOpen(!helpIsOpen)
 
 }
 const handleLogin = ()=>{
@@ -38,6 +38,8 @@ const handleSignup = ()=>{
 }
 const handleClose = ()=>{
   setPopup(false);
+
+
 }
 
     return(
@@ -47,25 +49,28 @@ const handleClose = ()=>{
 
 <Link className="navbarLogo" to="/">{props.title}</Link>
    <div className='navbarLeft'>
-    <div className='dropdown'>
-   <button className='navbarBtn' onClick={handleClick}><Link className="navbarButton " href="#">{props.company} </Link>
-    {!isOpen ? (
-       <FontAwesomeIcon className="fontAwesomeIcon fontawesomeDown" icon={faChevronDown}/>
-    ): (<FontAwesomeIcon className="fontAwesomeIcon fontawesomeUp" icon={faChevronUp}/>)}
+    <div className='companyDropdown'>
+   <button className='navbarBtn companyButton' ><Link className="navbarButton  " href="#">{props.company} </Link>
+<FontAwesomeIcon className="fontAwesomeIcon companyFontawesomeDown" icon={faChevronDown}/>
+<FontAwesomeIcon className="fontAwesomeIcon companyFontawesomeUp" icon={faChevronUp}/>
     </button>
-    {isOpen && (
+  
     <div className='companyUl'>
-    <ul>
-    <li className='companyLi'><Link className="companyItems" to="/about">About us</Link></li>
-    <li className='companyLi'><Link className="companyItems" to="/contact">Contact us</Link></li>
-    <li className='companyLi'><Link className="companyItems" href="#">How TrekCompanion works</Link></li>
-    </ul>
+    <Link className="companyItems" to="/about">About us</Link>
+    <Link className="companyItems" to="/contact">Contact us</Link>
     </div>
-    )} 
     </div>
     
-
-  <button className='navbarBtn' ><Link className="navbarButton " href="#">{props.help}</Link></button>  
+    <div className='helpDropdown'>
+  <button className='navbarBtn helpButton' ><Link className="navbarButton helpButton" href="#">{props.help}</Link> 
+<FontAwesomeIcon className="fontAwesomeIcon helpFontawesomeDown" icon={faChevronDown}/>
+<FontAwesomeIcon className="fontAwesomeIcon helpFontawesomeUp" icon={faChevronUp}/>
+    </button>
+ 
+    <div className='helpUl'>
+<Link className="helpItems" to="/contact"><FontAwesomeIcon className='fontAwesomeIcon helpFontAwesomeMessage' icon={faMessage} />  Send a message</Link>
+    </div>
+   </div>
   </div>
 <div className="navbarRight">
     <button className='navbarBtn loginBtn' onClick={handleLogin}><Link className="navbarButton login" to="#" >Log in</Link></button>

@@ -19,7 +19,7 @@ export default function About() {
     <h2>Our Team</h2>
     <div className="row">
         <div className="column">
-            <div className="card">
+            <div className="card" >
                <div className="container">
                <img src='../../public/images/sandesh.jpg' alt="Team Member 1"/>
                    <p className="title">Founder</p>

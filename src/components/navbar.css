@@ -6,12 +6,13 @@
     display: flex;
     top: 0;
     width: 100vw;
+    height: 35px;
     z-index: 1;
-    background-color: rgb(218, 214, 214);
+    background-color:rgb(199, 206, 223); ;
     position: sticky;
-    padding: 15px;
+    padding-top: 10px;
     padding-left: 8%;
-   box-shadow: 4px 4px 4px #8a898962
+   box-shadow: 4px 4px 4px #81808050
   
 
 
@@ -19,27 +20,31 @@
 
 
 .navbarLeft{
+
 display: flex;
 position: absolute;
-left: 300px;
+left: 280px;
+
 }
 
 .navbarRight{
 display: flex;
 position: absolute;
 right: 180px;
+
 } 
 
 .navbarLogo{
     color: black;
     font-size: larger;
     padding-top: 0px;
-    margin-left: 20px;
+
 }
 .navbarButton{
     color: black;
     margin-bottom: 5px;
     font-size: large;
+  
    
 }
 .navbarBtn{
@@ -56,36 +61,137 @@ right: 180px;
     outline: none;
 
 }
+/* company Dropdown */
 
 .companyItems{
     color: black;
+    display: flex;
    padding: 5px;
+   padding-bottom: 5px;
+   padding-top: 5px;
+   padding-left: 20px;
 }
-.companyLi{
-    padding-bottom: 5px;
-    padding-top: 5px;
+.companyItems:hover{
+    background-color:rgb(199, 210, 240); 
+    border-radius: 6px;
 }
-.companyLi:hover{
-    background-color:rgb(212, 211, 211); ;
+.companyButton{
+    margin-right:20px;
+    /* yo button ko padding ley dropdown hover lai help garexa */
+    padding-bottom: 15px
 }
 
 
-.companyUl ul{
-    width: 300px;
+.companyUl{
+    width: 250px;
     border: black  1px;
-    background-color:white;
+    display: none;
+    border-radius: 2px;
+    background-color:rgb(234, 239, 252);
     list-style-type: none;
     font-size: large;
     position: absolute;
     padding: 10px;
-    padding-left: 20px;
-    top: 44px;
-    left: 30px;
+    top: 35px;
+    left: 20px;
     box-shadow: 4px 4px 4px #8a898962
+}
+
+/* for fontawesome */
+ .companyFontawesomeDown{
+    position: absolute;
+    left: 150px;
+    top: 8px;
+}
+.companyDropdown:hover .companyFontawesomeDown{
+    display: none;
+}
+ .companyFontawesomeUp{
+    display: none;
+    position: absolute;
+    left: 150px;
+    top: 8px;
+}
+.companyDropdown:hover .companyFontawesomeUp{
+    display: block;
+}
+
+/* to Display Company dropdown */
+
+.companyDropdown:hover  .companyUl {
+display: block;
 
 }
+
+/* help dropdown */
+.helpDropdown{
+    margin-left: 30px;
+}
+.helpItems{
+    color: black;
+    display: flex;
+    padding: 5px;
+   padding-bottom: 5px;
+   padding-top: 5px;
+   padding-left: 20px;
+}
+.helpItems:hover{
+    background-color:rgb(199, 210, 240); 
+    border-radius: 6px;
+}
+.helpButton{
+    margin-right:20px;
+    /* yo button ko padding ley dropdown hover lai help garexa */
+    padding-bottom: 15px
+}
+
+
+.helpUl{
+    width: 250px;
+    border: black  1px;
+    display: none;
+    border-radius: 2px;
+    background-color:rgb(234, 239, 252);
+    list-style-type: none;
+    font-size: large;
+    position: absolute;
+    padding: 10px;
+    top: 35px;
+    left: 180px;
+    box-shadow: 4px 4px 4px #8a898962  
+}
+/* for fontawesome */
+.helpFontawesomeDown{
+    position: absolute;
+    left: 290px;
+    top: 8px;
+}
+.helpDropdown:hover .helpFontawesomeDown{
+    display: none;
+}
+ .helpFontawesomeUp{
+    display: none;
+    position: absolute;
+    left: 290px;
+    top: 8px;
+}
+.helpDropdown:hover .helpFontawesomeUp{
+    display: block;
+}
+
+/* to display help Dropdown */
+.helpDropdown:hover .helpUl{
+display: block;
+
+}
+.helpFontAwesomeMessage{
+    margin-top: 7px;
+    margin-right: 20px;
+}
+
+
 .loginBtn{
-  background-color: rgb(71, 71, 71);
+  background-color: rgb(51, 63, 94);
   width:90px;
   padding: 5px;
   border-radius: 20px;
@@ -95,7 +201,7 @@ right: 180px;
 }
 
 .signupBtn{
-    background-color:rgb(71, 71, 71);
+    background-color:rgb(51, 63, 94);
     width: 90px;
     padding: 5px;
     border-radius: 20px;
@@ -109,10 +215,10 @@ right: 180px;
 
 .bodyPopup{
     position: absolute;
-    left: 3px;
-    top: 58px;
+    left: 0px;
+    top: 45px;
     background-color: white;
-    height:90vh;
+    height:100vh;
     width:100%;
     display: flex;
     justify-content: space-around;
@@ -134,8 +240,8 @@ right: 180px;
     padding-left: 50px;
 }
  .closeButton{
-    position:absolute;
-    top: 60px;
-    right: 80px;
-    height: 30px;
- } 
+    height: 28px;
+    position: absolute;
+    top: 5%;
+    left: 85%;
+ }
