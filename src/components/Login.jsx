@@ -1,11 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import './login.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCircleXmark} from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
+
 
 export default function Login() {
+    const navigate = useNavigate
+
+    const loginUser = async (e)=>{
+        e.preventDefault()
+        const formData = new FormData(e.currentTarget)
+        const data = Object.fromEntries(formData)
+
+        const response = await axios.post("http://localhost:2000/login",data)
+        if(response.status == 200){
+            alert( response.data.message)
+            navigate("/")
+        }
+        elseif(response.status == 404)
+        {
+            alert( response.data.message)
+        }
+    }
 
 return (
 
@@ -14,9 +33,9 @@ return (
     <div className="loginPage">
         <div className='loginContainer'>
         <h2>Login Form</h2>
-        <form action="/login" method="post" >
+        <form onSubmit={loginUser} method="post" >
             <div className="form-group">
-                <label htmlfor="email">Email:</label>
+                <label htmlFor="email">Email:</label>
                 <input type="email" id="email" name="email" required/>
             </div>
           

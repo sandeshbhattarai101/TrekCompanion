@@ -15,14 +15,14 @@ return(
   <>
 <div className='mainBody'>
   <div className='mainBodyContainer'>
-  <p className="bodyParagraph">
+  <div className="bodyParagraph">
         <h1>Guide with us and get paid.</h1>
 
         <h3>Guide on the platform with largest network of tourists.</h3>
-    </p>
+    </div>
     <div className="subBodyContainer">
-      <button className='bodyBtn'><Link className=' bodyButton earnBtn ' >Earn with TrekCompanion <FontAwesomeIcon className="bodyArrow fontAwesomeIcon"   icon={faArrowRight} /></Link></button>
-      <button className='bodyBtn'><Link  className=' bodyButton trekBtn ' >Trek with TrekCompanion <FontAwesomeIcon className="bodyArrow fontAwesomeIcon"   icon={faArrowRight} /></Link></button>
+      <button className='bodyBtn'><Link className=' bodyButton earnBtn ' to={"/signupForm"}>Earn with TrekCompanion <FontAwesomeIcon className="bodyArrow fontAwesomeIcon"   icon={faArrowRight} /></Link></button>
+      <button className='bodyBtn'><Link  className=' bodyButton trekBtn ' to={"/signupForm"}>Trek with TrekCompanion <FontAwesomeIcon className="bodyArrow fontAwesomeIcon"   icon={faArrowRight} /></Link></button>
     </div> 
     </div>
 
