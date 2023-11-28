@@ -11,21 +11,11 @@ import { Link } from 'react-router-dom';
 
 
 export default function Navbar(props) {
-const[companyIsOpen, setCompanyIsOpen] = useState(false)
-const[helpIsOpen, setHelpIsOpen] = useState(false)
+
 const[popup, setPopup] = useState(false)
 const[text, setText]= useState("");
 const[data, setData]= useState("");
 
-
- const handleClickCompany = ()=>{
-  setCompanyIsOpen(!companyIsOpen)
-
-}
- const handleClickHelp = ()=>{
-  setHelpIsOpen(!helpIsOpen)
-
-}
 const handleLogin = ()=>{
   setPopup(!popup);
   setText("Log in");
@@ -38,8 +28,6 @@ const handleSignup = ()=>{
 }
 const handleClose = ()=>{
   setPopup(false);
-
-
 }
 
     return(

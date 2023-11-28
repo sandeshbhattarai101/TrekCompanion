@@ -8,19 +8,21 @@ import axios from 'axios'
 
 
 export default function Login() {
-    const navigate = useNavigate
+    const navigate = useNavigate()
 
     const loginUser = async (e)=>{
-        e.preventDefault()
+        e.preventDefault();
         const formData = new FormData(e.currentTarget)
         const data = Object.fromEntries(formData)
 
-        const response = await axios.post("http://localhost:2000/login",data)
-        if(response.status == 200){
-            alert( response.data.message)
-            navigate("/")
+        const response = await axios.post("http://localhost:2000/login", data)
+
+     console.log(response.status)
+     if(response.status == 200){
+         alert( response.data.message)
+         navigate("/")
         }
-        elseif(response.status == 404)
+        else if(response.status == 404)
         {
             alert( response.data.message)
         }
@@ -40,11 +42,11 @@ return (
             </div>
           
             <div className="form-group">
-                <label htmlfor="password">Password:</label>
+                <label htmlFor="password">Password:</label>
                 <input type="password" id="password" name="password" required/>
             </div>
             <div className="form-group">
-                <input type="submit" value="Login"/>
+                <input type="submit" value="login"/>
             </div>
         </form>
 
