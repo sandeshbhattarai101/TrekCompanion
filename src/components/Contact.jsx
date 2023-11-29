@@ -29,8 +29,6 @@ return(
         
             <label htmlFor="number"><strong>Mobile Number</strong></label>
             <input type="text" name='number' id='number' placeholder=' +977 98xxxxxxxx'/>
-       
-           
             
             <label htmlFor="message"><strong>Message</strong></label>
             <textarea name="message" id="message" cols="30" rows="10"></textarea>

@@ -1,3 +1,4 @@
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,14 +12,16 @@
 
 }
 
+
+body {
+  margin: 0;
+  
+}
+
+
 a {
   font-weight: 500;
   text-decoration: inherit;
-}
-
-body {
- margin: 0;
-
 }
 
 h1 {
@@ -35,4 +38,17 @@ button {
   cursor: pointer;
 }
 
-
+@tailwind base;
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+}
+@tailwind components;
+@tailwind utilities;

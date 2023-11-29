@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
 }
@@ -60,9 +60,10 @@ right: 180px;
     overflow: hidden;
     outline: none;
 
-}
-/* company Dropdown */
+} */
 
+/* company Dropdown */
+/* 
 .companyItems{
     color: black;
     display: flex;
@@ -77,11 +78,10 @@ right: 180px;
 }
 .companyButton{
     margin-right:20px;
-    /* yo button ko padding ley dropdown hover lai help garexa */
     padding-bottom: 15px
-}
+} */
 
-
+/* 
 .companyUl{
     width: 250px;
     border: black  1px;
@@ -95,10 +95,10 @@ right: 180px;
     top: 35px;
     left: 20px;
     box-shadow: 4px 4px 4px #8a898962
-}
+} */
 
 /* for fontawesome */
- .companyFontawesomeDown{
+ /* .companyFontawesomeDown{
     position: absolute;
     left: 150px;
     top: 8px;
@@ -114,17 +114,17 @@ right: 180px;
 }
 .companyDropdown:hover .companyFontawesomeUp{
     display: block;
-}
+} */
 
 /* to Display Company dropdown */
 
-.companyDropdown:hover  .companyUl {
+/* .companyDropdown:hover  .companyUl {
 display: block;
 
-}
+} */
 
 /* help dropdown */
-.helpDropdown{
+/* .helpDropdown{
     margin-left: 30px;
 }
 .helpItems{
@@ -141,11 +141,11 @@ display: block;
 }
 .helpButton{
     margin-right:20px;
-    /* yo button ko padding ley dropdown hover lai help garexa */
+   
     padding-bottom: 15px
-}
+} */
 
-
+/* 
 .helpUl{
     width: 250px;
     border: black  1px;
@@ -159,9 +159,9 @@ display: block;
     top: 35px;
     left: 180px;
     box-shadow: 4px 4px 4px #8a898962  
-}
+} */
 /* for fontawesome */
-.helpFontawesomeDown{
+/* .helpFontawesomeDown{
     position: absolute;
     left: 290px;
     top: 8px;
@@ -177,10 +177,10 @@ display: block;
 }
 .helpDropdown:hover .helpFontawesomeUp{
     display: block;
-}
+} */
 
 /* to display help Dropdown */
-.helpDropdown:hover .helpUl{
+/* .helpDropdown:hover .helpUl{
 display: block;
 
 }
@@ -208,11 +208,11 @@ display: block;
 }
 .signup{
     color: white;
-}
+} */
 
 
 /* popup login-signup */
-
+/* 
 .bodyPopup{
     position: absolute;
     left: 0px;
@@ -244,4 +244,7 @@ display: block;
     position: absolute;
     top: 5%;
     left: 85%;
- }
+ } */
+
+
+ 
