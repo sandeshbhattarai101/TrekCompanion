@@ -15,9 +15,8 @@ export default function Login() {
         const formData = new FormData(e.currentTarget)
         const data = Object.fromEntries(formData)
 
-        const response = await axios.post("http://localhost:2000/login", data)
+        const response = await axios.post("http://localhost:3000/login", data)
 
-     console.log(response.status)
      if(response.status == 200){
          alert( response.data.message)
          navigate("/")

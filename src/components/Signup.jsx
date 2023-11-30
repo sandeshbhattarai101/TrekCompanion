@@ -19,7 +19,7 @@ export default function Signup() {
   //axios.post le arko argument object ma linxa tesaile convert gareko mathiko data lai object ma
    
       //send above states data to api
-     const response = await axios.post("http://localhost:2000/register", data) 
+     const response = await axios.post("http://localhost:3000/register", data) 
      if (response.status == 201){
       alert(response.data.message)
       navigate("/")
