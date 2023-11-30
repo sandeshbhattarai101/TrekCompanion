@@ -1,5 +1,4 @@
 import React from 'react'
-import "./contact.css"
 import Navbar from './Navbar'
 import Footer from './Footer'
 
@@ -28,9 +27,7 @@ return(
            
         
             <label htmlFor="number"><strong>Mobile Number</strong></label>
-            <input className='mb-1 mt-2 w-96 h-10 rounded border-custom-gray border text-base' type="text" name='number' id='number' placeholder=' +977 98xxxxxxxx'/>
-       
-           
+            <input type="text" name='number' id='number' placeholder=' +977 98xxxxxxxx'/>
             
             <label htmlFor="message"><strong>Message</strong></label>
             <textarea className='mt-1 mb-1 w-96 rounded-md border-gray-300' name="message" id="message" cols="30" rows="10"></textarea>

@@ -1,14 +1,10 @@
-*{
+/* *{
   margin: 0;
   padding: 0;
 }
 .mainBody{
   height: 100vh;
   width: 100vw;
-  background-image: url(../../public/images/bodywallpaper.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-
 
 }
 .mainBodyContainer {
@@ -23,6 +19,7 @@
   padding: 30px;
   border-radius: 20px;
 }
+
 .mainBodyContainer> p h3{
 margin-top: 20px;
 margin-left: 5px;
@@ -32,7 +29,7 @@ margin-left: 5px;
 .subBodyContainer{
   display: flex;
   flex-direction: column;
-  /* position: relative; */
+  position: relative;
   margin-top:30px ;
 
 }
@@ -51,5 +48,5 @@ color: white;
 .bodyArrow{
   margin-left: 30px;
   padding-top: 5px;
-}
+} */
 
