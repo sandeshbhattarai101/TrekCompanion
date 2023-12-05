@@ -10,7 +10,7 @@ import About from './components/About';
 import ForgotPassword from './components/ForgotPassword';
 import VerifyOtp from './components/verifyOtp';
 import ResetPassword from './components/ResetPassword'
- 
+import Destination from './components/Destination';
 
 import {
   BrowserRouter as Router,
@@ -39,6 +39,7 @@ function App() {
   <Route exact path='/forgotPassword' element={<ForgotPassword/>}/>
   <Route exact path='/verifyOtp' element={<VerifyOtp/>}/>
   <Route exact path='/resetPassword' element={<ResetPassword/>}/>
+  <Route exact path='/destination' element={<Destination/>}/>
   
 </Routes>
 

@@ -29,7 +29,7 @@ export default function ForgotPassword() {
     <>
     <div className="flex items-center justify-center h-screen">
     <div className="w-100 bg-white shadow-lg rounded-lg">
-      <div className="flex items-center justify-center py-5 px-4 bg-slate-500 border-b  border-gray-100 rounded-xl" >
+      <div className="flex items-center justify-center py-3 px-4 bg-slate-500 border-b  border-gray-100 rounded-xl" >
         <h3 className="text-2xl font-semibold text-white">Please provide your email address</h3>
       </div>
       <div className="p-4">
