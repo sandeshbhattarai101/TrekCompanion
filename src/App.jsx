@@ -7,6 +7,10 @@ import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import About from './components/About';
+import ForgotPassword from './components/ForgotPassword';
+import VerifyOtp from './components/verifyOtp';
+import ResetPassword from './components/ResetPassword'
+import Destination from './components/Destination';
 
 import {
   BrowserRouter as Router,
@@ -19,6 +23,8 @@ import {
 
 function App() {
 
+  
+
   return (
     <>
 <Router>
@@ -30,6 +36,10 @@ function App() {
   <Route exact path='/loginForm' element={<Login/>}/>
   <Route exact path='/signupForm' element={<Signup/>}/>
   <Route exact path='/about' element={<About/>}/>
+  <Route exact path='/forgotPassword' element={<ForgotPassword/>}/>
+  <Route exact path='/verifyOtp' element={<VerifyOtp/>}/>
+  <Route exact path='/resetPassword' element={<ResetPassword/>}/>
+  <Route exact path='/destination' element={<Destination/>}/>
   
 </Routes>
 
