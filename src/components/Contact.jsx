@@ -1,9 +1,28 @@
 import React from 'react'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+
 import Navbar from './Navbar'
 import Footer from './Footer'
 
 
 export default function Contact(props){
+
+    const navigate = useNavigate()
+    const submitMessage = async(e)=>{
+        e.preventDefault();
+        const  formData = new FormData(e.currentTarget) 
+        const  data = Object.fromEntries(formData)
+        const response = await axios.post("http://localhost:3000/addHelp", data)
+
+        if(response.status== 400){
+            alert("error")
+        }else if(response.status == 200){
+            alert("message added successfully")
+            navigate("/contact")
+        }
+
+    }
 
 return(
     <>
@@ -17,7 +36,7 @@ return(
    <div className='subContactContainer flex flex-row absolute top-[20%] left-[10%]'>
     <div className='firstContactContainer'>
         <h2 className='contactHeadingSecond mb-7 text-9x1'>Send your message</h2>
-        <form className='flex flex-col absolute left-[5px] text-lg' action="/contactus" method='post'>
+        <form onSubmit={submitMessage} className='flex flex-col absolute left-[5px] text-lg' action="/contactus" method='post'>
            
             <label htmlFor="name"> <b>Your Name</b></label>
             <input className="mb-1 mt-2 w-96 h-10 rounded border-custom-gray border text-base" type="text" name='name' id='name' placeholder=' Enter your name' required/>
@@ -27,7 +46,7 @@ return(
            
         
             <label htmlFor="number"><strong>Mobile Number</strong></label>
-            <input type="text" name='number' id='number' placeholder=' +977 98xxxxxxxx'/>
+            <input type="text" name='mobileNo' id='number' placeholder=' +977 98xxxxxxxx'/>
             
             <label htmlFor="message"><strong>Message</strong></label>
             <textarea className='mt-1 mb-1 w-96 rounded-md border-gray-300' name="message" id="message" cols="30" rows="10"></textarea>
