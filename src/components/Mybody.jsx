@@ -21,8 +21,6 @@ export default function Mybody() {
         alert("something went wrong")
       }
       
-      
-
   
   }
 
