@@ -1,4 +1,9 @@
 
+#root{
+   margin: 0;
+   padding: 0;
+   background-color: white;
+}
 /* for all fontawesome icon */
 .fontAwesomeIcon {
    margin-right: 10px;

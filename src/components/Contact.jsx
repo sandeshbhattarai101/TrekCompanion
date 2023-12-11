@@ -35,13 +35,8 @@ return(
 
    <div className='subContactContainer flex flex-row absolute top-[20%] left-[10%]'>
     <div className='firstContactContainer'>
-<<<<<<< HEAD
-        <h2 className='contactHeadingSecond mb-7 text-2xl font-semibold'>Send your message</h2>
-        <form className='flex flex-col absolute left-[5px] text-lg' action="/contactus" method='post'>
-=======
         <h2 className='contactHeadingSecond mb-7 text-9x1'>Send your message</h2>
         <form onSubmit={submitMessage} className='flex flex-col absolute left-[5px] text-lg' action="/contactus" method='post'>
->>>>>>> 43f641841475087495792d44b7ed853fe7a941e1
            
             <label htmlFor="name"> <b>Your Name</b></label>
             <input className="mb-4 mt-2 w-96 h-10  rounded border-gray-300 border-2 text-base" type="text" name='name' id='name' placeholder=' Enter your name' required/>
@@ -51,11 +46,7 @@ return(
            
         
             <label htmlFor="number"><strong>Mobile Number</strong></label>
-<<<<<<< HEAD
-            <input className='mb-4 border-2 border-gray-300' type="text" name='number' id='number' placeholder=' +977 98xxxxxxxx'/>
-=======
             <input type="text" name='mobileNo' id='number' placeholder=' +977 98xxxxxxxx'/>
->>>>>>> 43f641841475087495792d44b7ed853fe7a941e1
             
             <label htmlFor="message"><strong>Message</strong></label>
             <textarea className='mt-1 mb-4 w-96 rounded-md  border-2 border-gray-300' name="message" id="message" cols="30" rows="10"></textarea>
