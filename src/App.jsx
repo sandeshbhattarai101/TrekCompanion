@@ -10,13 +10,14 @@ import About from './components/About';
 import ForgotPassword from './components/ForgotPassword';
 import VerifyOtp from './components/verifyOtp';
 import ResetPassword from './components/ResetPassword'
-import Destination from './components/Destination';
-
+import Destination from './components/admin/Destination';
+import AdminDashboard from './components/admin/adminDashboard';
 import {
   BrowserRouter as Router,
   Route,
   Routes,
 } from "react-router-dom";
+
 
 
 
@@ -39,7 +40,8 @@ function App() {
   <Route exact path='/forgotPassword' element={<ForgotPassword/>}/>
   <Route exact path='/verifyOtp' element={<VerifyOtp/>}/>
   <Route exact path='/resetPassword' element={<ResetPassword/>}/>
-  <Route exact path='/destination' element={<Destination/>}/>
+  <Route exact path='/destinations' element={<Destination/>}/>
+  <Route exact path='/admin' element={<AdminDashboard/>}/>
   
 </Routes>
 

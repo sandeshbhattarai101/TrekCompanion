@@ -1,19 +1,19 @@
 import axios from 'axios'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link} from 'react-router-dom'
 
 export default function Destination() {
     const navigate = useNavigate()
     const createDestination = async (e)=> {
-        e.preventDefault()
+        e.preventDefault();
        const  formData = new FormData(e.currentTarget) 
        const  data = Object.fromEntries(formData)
-        const response = await axios.post("http://localhost:3000/destination", data)
+        const response = await axios.post("http://localhost:3000/destinations", data)
     if(response.status== 400){
         alert("Please enter all the details")
     }else if(response.status == 200){
         alert("Destination Created Successfully")
-        navigate("/destination")
+        navigate("/admin")
     }
 
         
@@ -31,7 +31,7 @@ export default function Destination() {
        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="destinationName" name='destinationName' type="text" placeholder="Destination Name" />
      </div>
      <div className="mb-4">
-       <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="destinationName">
+       <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="destinationImage">
          Destination Image
        </label>
        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="destinationImage" name='destinationImage' type="file" />
@@ -67,18 +67,16 @@ export default function Destination() {
        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="maxAltitude" name='maxAltitude' type="text" placeholder="Max Altitude" />
      </div>
      <div className="mb-4">
-       <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="destinationStatus">
-         Destination Status
-       </label>
+       <h4><strong>Destination Status </strong> </h4>        
        <label className='mr-3' htmlFor="published">Publish</label>
-       <input className='mr-8' id="destinationStatus" type="radio" name="destinationStatus" value="published" placeholder="Destination Status"/>
+       <input className='mr-8' id='published'  type="radio" name="destinationStatus" value="published" placeholder="Destination Status"/>
        <label className='mr-3' htmlFor="unpublished">Unpublish</label>
-       <input  id="destinationStatus" type="radio" name="destinationStatus" value="unpublished" placeholder="Destination Status"/>
+       <input  type="radio" id='unpublished' name="destinationStatus" value="unpublished" placeholder="Destination Status"/>
      
      </div>
      <div className="flex items-center justify-between">
        <button className="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-         Submit
+        Submit
        </button>
      </div>  
    </form>
