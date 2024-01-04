@@ -1,14 +1,11 @@
 
-
-
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCircleXmark} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import Navbar from './Navbar';
 import axios from 'axios'
 
-export default function Signup() {
+export default function GuideSignup() {
    const navigate = useNavigate()
 
     const createUser = async (e)=>{
@@ -21,7 +18,7 @@ export default function Signup() {
   //axios.post le arko argument object ma linxa tesaile convert gareko mathiko data lai object ma
    
       //send above states data to api
-     const response = await axios.post("http://localhost:3000/register", data) 
+     const response = await axios.post("http://localhost:3000/registerguide", data) 
      if (response.status == 201){
       alert(response.data.message)
       navigate("/")
@@ -33,6 +30,7 @@ export default function Signup() {
 
    return(
      <>
+      <Navbar title="TrekCompanion" company="Company" help="Help" explore="Explore"/>
      <div className="w-screen h-screen">
      <div className="max-w-[400px] mx-auto p-5 bg-white shadow-md rounded-md mt-5">
            <h2 className="text-center mb-5">Registration Form</h2>

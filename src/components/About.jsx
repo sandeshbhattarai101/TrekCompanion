@@ -1,12 +1,14 @@
 import React from 'react'
 import "./about.css"
+import Navbar from './Navbar';
+
 
 
 export default function About() {
 
   return (
     <>
-    
+        <Navbar title="TrekCompanion" company="Company" help="Help" explore="Explore"/>
     <div className=" w-4/5 m-auto p-20">
     <h1 className='font-bold text-xl my-1'>About Us</h1>
     <p className='text-justify leading-6 mb-3'>TrekCompanion is a platform designed to connect tourists with independent trekking guides. We aim to provide a better trekking experience by eliminating the hassle of searching for a guide. Our system is a web-based application that uses MERN technology to provide user interface and user experience along with the database that would hold the credentials of the registered users as well as all the resources that make up the system.</p>

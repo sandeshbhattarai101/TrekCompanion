@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { useNavigate, Link} from 'react-router-dom'
+import AdminNavbar from './AdminNavbar'
 
 export default function Destination() {
     const navigate = useNavigate()
@@ -22,6 +23,8 @@ export default function Destination() {
 
   return (
     <>
+    <AdminNavbar/>
+
     <div className="mainDestination flex justify-center m-16">
     <form onSubmit={createDestination} className="w-full max-w-sm" method='post' encType='multipart/form-data'>
      <div className="mb-4">

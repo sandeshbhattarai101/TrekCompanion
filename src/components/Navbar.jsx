@@ -3,8 +3,6 @@ import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChevronDown, faChevronUp} from '@fortawesome/free-solid-svg-icons'
 import {faMessage} from '@fortawesome/free-solid-svg-icons'
-import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
-import {faCircleXmark} from '@fortawesome/free-solid-svg-icons'
 import {faBars} from '@fortawesome/free-solid-svg-icons'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
@@ -12,26 +10,10 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
 
-const[popup, setPopup] = useState(false)
 const[popupMenu, setPopupMenu] = useState(false)
 const[companyDropdown, setCompanyDropdown] = useState(false)
 const[helpDropdown, setHelpDropdown] = useState(false)
-const[text, setText]= useState("");
-const[data, setData]= useState("");
 
-const handleLogin = ()=>{
-  setPopup(!popup);
-  setText("Log in");
-  setData("/loginForm");
-}
-const handleSignup = ()=>{
-  setPopup(!popup);
-  setText("Sign up");
-  setData("/signupForm");
-}
-const handleClose = ()=>{
-  setPopup(false);
-}
 const handleMenu = ()=>{
   setPopupMenu(!popupMenu)
 
@@ -78,8 +60,8 @@ const handleHelp = ()=>{
    </div>
   </div>
 <div className="navbarRight hidden md:flex absolute right-[180px]">
-    <button className='navbarBtn loginBtn  h-fit  ml-[50px]   bg-repeat border-none cursor-pointer overflow-hidden outline-none bg-slate-600 w-[90px] p-[5px] rounded-3xl' onClick={handleLogin}><Link className="navbarButton login text-white" to="#" >Log in</Link></button>
-    <button className='navbarBtn signupBtn  h-fit ml-[50px]   bg-repeat border-none cursor-pointer overflow-hidden outline-none bg-slate-600 w-[90px] p-[5px] rounded-3xl' onClick={handleSignup}><Link className="navbarButton signup text-white" to="#">Sign up</Link></button>
+    <button className='navbarBtn loginBtn  h-fit  ml-[50px]   bg-repeat border-none cursor-pointer overflow-hidden outline-none bg-slate-600 w-[90px] p-[5px] rounded-3xl' ><Link className="navbarButton login text-white" to="/redirectlogin" >Log in</Link></button>
+    <button className='navbarBtn signupBtn  h-fit ml-[50px]   bg-repeat border-none cursor-pointer overflow-hidden outline-none bg-slate-600 w-[90px] p-[5px] rounded-3xl'><Link className="navbarButton signup text-white" to="/redirectsignup">Sign up</Link></button>
 
 </div>
 
@@ -127,13 +109,7 @@ const handleHelp = ()=>{
 
 
 
-    {/* popup login-signup page */}
-    {popup?
-<div className="bodyPopup  absolute left-0 top-[45px] bg-white h-screen w-full flex justify-around items-center flex-row z-10">
-   <FontAwesomeIcon className="closeButton  h-7 absolute top-[5%] left-[85%]" onClick={handleClose} icon={faCircleXmark} />
-  <Link className="popButton popEarn text-3xl font-bold border-b-2 border-black pb-10" to={data} onClick={handleClose} >{text} to guide & earn <FontAwesomeIcon className= "arrow2 pl-[50px]"  icon={faArrowRight} /></Link>
-  <Link className="popButton popTrek text-3xl font-bold border-b-2 border-black pb-10" to={data} onClick={handleClose} >{text} to trek with us <FontAwesomeIcon className= "arrow2 pl-[50px]"  icon={faArrowRight} /></Link>
-  </div>:""}
+
 
   </nav>
  </>

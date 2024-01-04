@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import Navbar from './Navbar';
 import axios from 'axios';
 
 
@@ -30,6 +31,7 @@ export default function Mybody() {
 
 return(
   <>
+   <Navbar title="TrekCompanion" company="Company" help="Help" explore="Explore"/>
 <div className='mainBody  h-[1550px] md:h-[900px] w-screen flex flex-row  ' >
   <div className='mainBodyContainer flex flex-col absolute top-36 left-24 bg-slate-300 w-170 h-62 p-7 rounded-3xl '>
   <div className="bodyParagraph mt-1 ml-1">

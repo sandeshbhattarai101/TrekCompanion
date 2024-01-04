@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faUser} from '@fortawesome/free-solid-svg-icons'
+import AdminNavbar from './AdminNavbar'
 import axios from 'axios'
 
 export default function AdminDashboard() {
@@ -25,13 +24,8 @@ export default function AdminDashboard() {
   
   return (
     <div className='adminDashboard h-[1000px] w-screen '>
-        <div className="adminNavbar h-12 bg-blue-600 ">
-        <Link className="navbarLogo text-black text-lg absolute left-24 " to="/admin">TrekCompanion</Link>
-        <button className="navbarUser text-black text-lg absolute right-24 " to="/admin"> <FontAwesomeIcon icon={faUser} />admin</button>
-        </div>
-        
-
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg ">
+<AdminNavbar/>
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg top-10">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
     <div className='tableheading flex flex-row font-semibold ml-8'>
         <h5 className='mr-12'>Image</h5>
@@ -87,7 +81,7 @@ export default function AdminDashboard() {
     }) }
     </table>
 </div>
-    <button className='h-10 w-40 m-2 ml-6  bg-slate-500 text-white font-semibold'><Link to={'/destinations'}>Add Destination</Link></button>
+    <button className='h-10 w-40 m-2 ml-6 relative top-12  bg-slate-500 text-white font-semibold'><Link to={'/destinations'}>Add Destination</Link></button>
 
         </div>
   )

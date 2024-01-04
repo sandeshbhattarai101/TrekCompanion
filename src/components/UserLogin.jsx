@@ -1,9 +1,10 @@
 
 import React, { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Navbar from './Navbar';
 import axios from 'axios'
 
-export default function Login() {
+export default function UserLogin() {
    const navigate = useNavigate()
 
    const loginUser = async (e)=>{
@@ -13,7 +14,6 @@ export default function Login() {
 
         const response = await axios.post("http://localhost:3000/login", data)
 
-   
      if(response.status == 200){
          alert( response.data.message)
          navigate("/")
@@ -26,6 +26,7 @@ export default function Login() {
 
 return (
    <>
+    <Navbar title="TrekCompanion" company="Company" help="Help" explore="Explore"/>
    <div className="w-screen h-screen">
        <div className="w-[400px] mx-auto p-5 bg-white shadow-md rounded-md mt-5">
        <h2 className="text-center mb-5">Login Form</h2>

@@ -1,9 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-
 import Navbar from './Navbar'
-import Footer from './Footer'
+
 
 
 export default function Contact(props){
@@ -27,7 +26,7 @@ export default function Contact(props){
 return(
     <>
 
-
+<Navbar title="TrekCompanion" company="Company" help="Help" explore="Explore"/>
     <div className='mainContactContainer h-[980px] w-screen bg-white'>
     <div className='mainContactHeading border-b border-opacity-25 border-black mb-15 pb-15 absolute top-[10%] left-[10%]'>
     <h2 className='ContactHeadingFirst mb-5 text-3xl font-bold'>Contact Us</h2>
