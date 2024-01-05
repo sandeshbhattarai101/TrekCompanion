@@ -20,6 +20,7 @@ import {
 } from "react-router-dom";
 import RedirectLogin from './components/RedirectLogin';
 import RedirectSignup from './components/RedirectSignup';
+import TouristDashboard from './components/tourist/TouristDashboard';
 
 
 
@@ -49,6 +50,7 @@ function App() {
   <Route exact path='/resetPassword' element={<ResetPassword/>}/>
   <Route exact path='/destinations' element={<Destination/>}/>
   <Route exact path='/admin' element={<AdminDashboard/>}/>
+  <Route exact path='/tourist' element={<TouristDashboard/>}/>
   
 </Routes>
 
