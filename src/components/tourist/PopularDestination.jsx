@@ -28,7 +28,7 @@ const PopularDestination = () => {
     fetchDestinations();
   }, []);
   return (
-    <div className="PopularDestinationCards h-fit left-24 top-10 relative ">
+    <div className="PopularDestinationCards h-fit left-24 top-10 mb-28 relative ">
       <h1 className="mb-10 font-serif font-semi-bold text-3xl">
         Popular Destinations
       </h1>

@@ -1,6 +1,7 @@
 import React from 'react'
 import TouristNavbar from './TouristNavbar'
 import PopularDestination from './PopularDestination'
+import TopGuides from './TopGuides'
 
 
 
@@ -9,6 +10,7 @@ const TouristDashboard = () => {
 <div>
  <TouristNavbar/>
  <PopularDestination/>
+ <TopGuides/>
 
 
 

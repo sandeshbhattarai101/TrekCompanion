@@ -13,14 +13,14 @@ import VerifyOtp from './components/verifyOtp';
 import ResetPassword from './components/ResetPassword'
 import Destination from './components/admin/Destination';
 import AdminDashboard from './components/admin/adminDashboard';
+import RedirectLogin from './components/RedirectLogin';
+import RedirectSignup from './components/RedirectSignup';
+import TouristDashboard from './components/tourist/TouristDashboard';
 import {
   BrowserRouter as Router,
   Route,
   Routes,
 } from "react-router-dom";
-import RedirectLogin from './components/RedirectLogin';
-import RedirectSignup from './components/RedirectSignup';
-import TouristDashboard from './components/tourist/TouristDashboard';
 
 
 

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faUser} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import DropDownProfile from './DropDownProfile'
-import profile from "./pp.png"
+import profile from "../../../public/images/pp.png"
 import SearchBar from './SearchBar'
 
 
