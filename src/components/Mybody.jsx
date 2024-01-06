@@ -33,7 +33,7 @@ export default function Mybody() {
 return(
   <>
    <Navbar title="TrekCompanion" company="Company" help="Help" explore="Explore"/>
-<div className='mainBody  h-[1550px] md:h-[900px] w-screen flex flex-row  ' >
+<div className='mainBody  h-[500px] md:h-[500px] w-screen flex flex-row  ' >
   <div className='mainBodyContainer flex flex-col absolute top-36 left-24 bg-slate-300 w-170 h-62 p-7 rounded-3xl '>
   <div className="bodyParagraph mt-1 ml-1">
         <h1 className='text-3xl font-semibold'>Guide with us and get paid.</h1>

@@ -8,9 +8,9 @@ const PopularDestination = () => {
   const settings = {
     dots: false,
     infinite: false,
-    speed: 500,
+    speed: 400,
     slidesToShow: 5,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
   };
   const [destinations, setDestinations] = useState([]);
 
@@ -28,7 +28,7 @@ const PopularDestination = () => {
     fetchDestinations();
   }, []);
   return (
-    <div className="PopularDestinationCards h-fit left-24 relative top-4">
+    <div className="PopularDestinationCards h-fit left-24 top-10 relative ">
       <h1 className="mb-10 font-serif font-semi-bold text-3xl">
         Popular Destinations
       </h1>
@@ -36,13 +36,13 @@ const PopularDestination = () => {
       <Slider {...settings}>
         {destinations.map((destination) => {
           return (
-            <div key={destination._id} className="card-body w-[300px] ">
+            <div key={destination._id} className="card-body text-center">
               <img
-                className="cardImage object-cover h-[280px] w-[230px] rounded-xl shadow-md"
+                className="cardImage object-cover h-[150px] md:h-[280px] w-[130px] md:w-[230px] p-1 rounded-xl shadow-md "
                 src={destination.destinationImage}
                 alt="image"
               />
-              <h5 className="cardTitle font-bold text-center mt-2">
+              <h5 className="cardTitle font-bold  mt-2">
                 {destination.destinationName}
               </h5>
             </div>
