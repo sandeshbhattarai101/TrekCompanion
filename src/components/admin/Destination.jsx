@@ -1,15 +1,23 @@
 import axios from 'axios'
-import React from 'react'
-import { useNavigate, Link} from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useNavigate,useParams, Link} from 'react-router-dom'
 import AdminNavbar from './AdminNavbar'
 
 export default function Destination() {
+
     const navigate = useNavigate()
     const createDestination = async (e)=> {
         e.preventDefault();
        const  formData = new FormData(e.currentTarget) 
        const  data = Object.fromEntries(formData)
-        const response = await axios.post("http://localhost:3000/destinations", data)
+       const response = await axios.post("http://localhost:3000/destinations", data,{
+         withCredentials : true,
+         headers:{
+          "Content-Type" : "multipart/form-data"
+         }
+
+        })
+        console.log(data)
     if(response.status== 400){
         alert("Please enter all the details")
     }else if(response.status == 200){
@@ -37,7 +45,7 @@ export default function Destination() {
        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="destinationImage">
          Destination Image
        </label>
-       <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="destinationImage" name='destinationImage' type="file" />
+       <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="destinationImage" name='destinationImage' type="file" required />
      </div>
      <div className="mb-4">
        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="destinationDescription">

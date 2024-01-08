@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Navbar from './Navbar';
 import axios from 'axios';
 import PopularDestination from './tourist/PopularDestination';
@@ -9,26 +9,6 @@ import PopularDestination from './tourist/PopularDestination';
 
 
 export default function Mybody() {
-  const [destinations, setDestinations] = useState([])
-  
-  const fetchDestinations = async ()=>{
- 
-      const response = await axios.get('http://localhost:3000/destinations')
-      console.log(response.data.data); 
-      if(response.status ==200){
-        setDestinations(response.data.data)
-       
-        
-      }else{
-        alert("something went wrong")
-      }
-      
-  
-  }
-
-  useEffect(()=>{
-    fetchDestinations()
-  },[])
 
 return(
   <>

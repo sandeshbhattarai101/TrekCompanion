@@ -16,6 +16,10 @@ import AdminDashboard from './components/admin/adminDashboard';
 import RedirectLogin from './components/RedirectLogin';
 import RedirectSignup from './components/RedirectSignup';
 import TouristDashboard from './components/tourist/TouristDashboard';
+import SingleDestination from './components/admin/SingleDestination';
+import DeleteDestination from './components/admin/deleteDestination';
+import { useParams } from 'react-router-dom';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -28,7 +32,7 @@ import Profile from './components/profile/profile';
 
 
 function App() {
-
+const params = useParams();
   
 
   return (
@@ -50,6 +54,8 @@ function App() {
   <Route exact path='/verifyOtp' element={<VerifyOtp/>}/>
   <Route exact path='/resetPassword' element={<ResetPassword/>}/>
   <Route exact path='/destinations' element={<Destination/>}/>
+  <Route exact path={'/destinations/:id'} element={<SingleDestination/>}/>
+  <Route exact path={'/destinations/delete/:id'} element={<DeleteDestination/>}/>
   <Route exact path='/admin' element={<AdminDashboard/>}/>
   <Route exact path='/tourist' element={<TouristDashboard/>}/>
   <Route exact path= '/profile' element={<Profile/>}/>

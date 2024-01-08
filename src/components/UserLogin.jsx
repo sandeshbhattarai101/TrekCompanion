@@ -12,7 +12,9 @@ export default function UserLogin() {
        const formData = new FormData(e.currentTarget)
        const data = Object.fromEntries(formData)
 
-        const response = await axios.post("http://localhost:3000/login", data)
+        const response = await axios.post("http://localhost:3000/login", data,{
+            withCredentials : true
+        })
 
      if(response.status == 200){
          alert( response.data.message)
