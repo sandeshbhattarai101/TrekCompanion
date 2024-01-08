@@ -52,6 +52,8 @@ export default function UserSignup() {
                <div className="mb-5">
                   <input type="submit" value="register" className="w-full p-2 bg-blue-500 text-white cursor-pointer hover:bg-blue-700"/>
                </div>
+               <input type="hidden" value="tourist" name='role'/>
+
            </form>
            <Link to="/loginForm">Already have an account?</Link>   
        </div>
