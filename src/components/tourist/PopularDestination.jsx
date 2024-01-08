@@ -10,13 +10,13 @@ const PopularDestination = () => {
     infinite: false,
     speed: 400,
     slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
   };
   const [destinations, setDestinations] = useState([]);
 
   const fetchDestinations = async () => {
     const response = await axios.get("http://localhost:3000/destinations");
-    console.log(response.data.data);
+   // console.log(response.data.data);
     if (response.status == 200) {
       setDestinations(response.data.data);
     } else {

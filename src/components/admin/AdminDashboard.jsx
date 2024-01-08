@@ -4,26 +4,27 @@ import AdminNavbar from './AdminNavbar'
 import axios from 'axios'
 
 export default function AdminDashboard() {
-    const [destinations, setDestinations] = useState([])
-  
-    const fetchDestinations = async ()=>{
    
+    const [destinations, setDestinations] = useState([])
+    const fetchDestinations = async ()=>{
+        
         const response = await axios.get('http://localhost:3000/destinations')
         if(response.status ==200){
-          setDestinations(response.data.data)
-         
-          
+            setDestinations(response.data.data)
+            
+            
         }else{
-          alert("something went wrong")
+            alert("something went wrong")
         }
         
     }
+ 
         useEffect(()=>{
             fetchDestinations()
-          },[])
+        },[])
   
   return (
-    <div className='adminDashboard h-[1000px] w-screen '>
+    <div className='adminDashboard h-fit mb-20 w-screen '>
 <AdminNavbar/>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg top-10">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
@@ -39,6 +40,7 @@ export default function AdminDashboard() {
         <h5 className='mr-12'>Action</h5>
     </div>
         {destinations.map((destination)=>{
+           
         return(
             
             <div key={destination._id} className="card-body w-full ">
@@ -70,7 +72,10 @@ export default function AdminDashboard() {
                 {destination.destinationStatus}
                 </td>
                 <td class="px-6 py-4">
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <Link to={`/destinations/${destination._id}`} class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</Link>
+                </td>
+                <td class="px-6 py-4">
+                    <Link to={`/destinations/delete/${destination._id}`} class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</Link>
                 </td>
             </tr>
             
