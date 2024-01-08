@@ -11,7 +11,7 @@ export default function GuideLogin() {
        const formData = new FormData(e.currentTarget)
        const data = Object.fromEntries(formData)
 
-        const response = await axios.post("http://localhost:3000/loginguide", data,{
+        const response = await axios.post("http://localhost:3000/login", data,{
             withCredentials : true
         })
 

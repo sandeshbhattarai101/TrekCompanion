@@ -18,7 +18,7 @@ export default function GuideSignup() {
   //axios.post le arko argument object ma linxa tesaile convert gareko mathiko data lai object ma
    
       //send above states data to api
-     const response = await axios.post("http://localhost:3000/registerguide", data) 
+      const response = await axios.post("http://localhost:3000/register", data) 
      if (response.status == 201){
       alert(response.data.message)
       navigate("/")
@@ -50,6 +50,8 @@ export default function GuideSignup() {
                <div className="mb-5">
                   <input type="submit" value="register" className="w-full p-2 bg-blue-500 text-white cursor-pointer hover:bg-blue-700"/>
                </div>
+                <input type="hidden" value="guide" name='role'/>
+            
            </form>
            <Link to="/loginForm">Already have an account?</Link>   
        </div>
