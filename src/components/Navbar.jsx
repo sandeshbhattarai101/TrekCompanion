@@ -60,7 +60,7 @@ const handleHelp = ()=>{
    </div>
   </div>
 <div className="navbarRight hidden md:flex absolute right-[180px]">
-    <button className='navbarBtn loginBtn  h-fit  ml-[50px]   bg-repeat border-none cursor-pointer overflow-hidden outline-none bg-slate-600 w-[90px] p-[5px] rounded-3xl' ><Link className="navbarButton login text-white" to="/redirectlogin" >Log in</Link></button>
+    <button className='navbarBtn loginBtn h-[fit]   ml-[50px]   bg-repeat border-none cursor-pointer overflow-hidden outline-none bg-slate-600 w-[90px] p-[5px] rounded-3xl' ><Link className="navbarButton login text-white" to="/redirectlogin" >Log in</Link></button>
     <button className='navbarBtn signupBtn  h-fit ml-[50px]   bg-repeat border-none cursor-pointer overflow-hidden outline-none bg-slate-600 w-[90px] p-[5px] rounded-3xl'><Link className="navbarButton signup text-white" to="/redirectsignup">Sign up</Link></button>
 
 </div>

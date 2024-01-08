@@ -20,12 +20,14 @@ import SingleDestination from './components/admin/SingleDestination';
 import DeleteDestination from './components/admin/deleteDestination';
 import { useParams } from 'react-router-dom';
 
+
 import {
   BrowserRouter as Router,
   Route,
   Routes,
 } from "react-router-dom";
 import Profile from './components/profile/profile';
+import UpdateProfile from './components/profile/UpdateProfile';
 
 
 
@@ -59,6 +61,7 @@ const params = useParams();
   <Route exact path='/admin' element={<AdminDashboard/>}/>
   <Route exact path='/tourist' element={<TouristDashboard/>}/>
   <Route exact path= '/profile' element={<Profile/>}/>
+  <Route exact path='/updateProfile' element={<UpdateProfile/>}/>
   
 </Routes>
 
