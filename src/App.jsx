@@ -21,6 +21,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import Profile from './components/profile/profile';
 
 
 
@@ -51,6 +52,7 @@ function App() {
   <Route exact path='/destinations' element={<Destination/>}/>
   <Route exact path='/admin' element={<AdminDashboard/>}/>
   <Route exact path='/tourist' element={<TouristDashboard/>}/>
+  <Route exact path= '/profile' element={<Profile/>}/>
   
 </Routes>
 

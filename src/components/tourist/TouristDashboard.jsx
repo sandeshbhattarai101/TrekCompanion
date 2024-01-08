@@ -8,6 +8,7 @@ import TopGuides from './TopGuides'
 const TouristDashboard = () => {
   return (
 <div>
+
  <TouristNavbar/>
  <PopularDestination/>
  <TopGuides/>
