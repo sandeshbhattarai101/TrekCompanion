@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ChatState } from '../Context/ChatProvider'
+import { ChatState } from '../../Context/ChatProvider'
 import { Box, FormControl, IconButton, Input, Spinner, Text, useToast } from '@chakra-ui/react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
 import axios from 'axios';
@@ -61,7 +61,7 @@ export default function SingleChat() {
             //    console.log(response);
 
             
-                setMessages([...messages,response])
+                setMessages([...messages,response.data])
         } catch(error){
             toast({
                 title: "Error Occurred",

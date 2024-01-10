@@ -26,7 +26,7 @@ import {
 } from "react-router-dom";
 import Profile from './components/profile/profile';
 import UpdateProfile from './components/profile/UpdateProfile';
-import ChatPage from './components/myChats/ChatPage';
+ import ChatPage from './components/myChats/ChatPage';
 
 
 

@@ -10,9 +10,9 @@ import { ChatState } from '../../Context/ChatProvider';
 export default function ChatPage() {
    const {user} =  ChatState();
   return (
-    <div style={{width : "100%"}}>
+    <div  style={{width : "100%"}}>
       { user && <SideDrawer/>}
-      <Box className='flex justify-between w-[100%] h-[91.5vh] p-[10px]'>
+      <Box className='flex justify-between w-[100%] h-[91.5vh] p-[10px] bg-slate-300'>
         {user && <MyChats/>}
         {user && <ChatBox/>}
       </Box>

@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
   <ChatProvider>
   <ChakraProvider>
-     <App />
+     <App/>
   </ChakraProvider>
   </ChatProvider>
   </React.StrictMode>

@@ -18,7 +18,7 @@ useEffect(()=>{
       withCredentials : true
     })
    // console.log(response.data)
-    setUser(response.data)
+    setUser(response.data.data)
   }
   getFormData();
 },[])

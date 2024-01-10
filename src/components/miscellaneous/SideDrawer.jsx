@@ -5,7 +5,7 @@ import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 import { ChatState } from '../../Context/ChatProvider';
 import axios from 'axios';
-import ChatLoading from '../ChatLoading';
+import ChatLoading from '../chats/ChatLoading';
 import { UserListItem } from '../UserAvatar/UserListItem';
 
 
@@ -79,7 +79,7 @@ const toast = useToast();
 
   return (
     <>
-    <Box className='flex justify-between items-center bg-white w-full p-[5px] border-1'>
+    <Box className='flex justify-between items-center bg-slate-500 w-full p-[5px] border-1 '>
       <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
         <Button variant="ghost" onClick={onOpen}>
         <FontAwesomeIcon icon={faMagnifyingGlass} />

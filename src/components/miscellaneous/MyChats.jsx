@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { ChatState } from '../../Context/ChatProvider';
-import ChatLoading from '../ChatLoading';
+import ChatLoading from '../chats/ChatLoading';
 import { Box, Stack, Text, useToast } from '@chakra-ui/react';
 import axios from 'axios';
 import { getSender } from '../config/ChatLogics';
@@ -40,16 +40,15 @@ export default function MyChats() {
   },[])
   return (
     <>
-    <Box d={{ base: selectedChat ? "none" : "flex", md:"flex"  }} flexDir="column" alignItems="center" p={3} bg="white" w={{base:"100%", md:"31%"}} borderRadius="lg" borderWidth="1px">
-      <Box className='pb-3 px-3 text-[28px] md:text-[30px] font-sans flex w-full justify-between items-center'>
-        My Chats
-      </Box>
+    <Box className='bg-slate-300 shadow-xl border-slate-400 border-2 ' d={{ base: selectedChat ? "none" : "flex", md:"flex"  }} flexDir="column" alignItems="center" p={3}  w={{base:"100%", md:"31%"}} borderRadius="lg"  >
+
       
-      <Box className='flex flex-col p-3 bg-slate-400 w-full h-[91.5%] rounded-lg overflow-y-hidden' >
+      <Box className='flex flex-col p-3 bg-slate-300 w-full h-[100%] rounded-lg overflow-y-hidden' >
+        <h1 className=' pb-8 px-3 text-[28px] md:text-[30px] font-sans flex w-full justify-between items-center'>My Chats</h1> 
         {chats ? (
           <Stack className='overflow-y-scroll'>
             {chats.map((chat)=>(
-              <Box key={chat._id} onClick={()=> setSelectedChat(chat)} bg={selectedChat === chat ? "#64748b" : "#E8E8E8"} color={selectedChat === chat ? "white" : "black"} className='cursor-pointer px-3 py-5 rounded-lg'>
+              <Box key={chat._id} onClick={()=> setSelectedChat(chat)} bg={selectedChat === chat ? "#475569" : "#64748b"} color={selectedChat === chat ? "white" : "black"} className='cursor-pointer px-3 py-5 rounded-lg  '>
                 <Text>
                   {getSender(loggedUser, chat.users)}
                 </Text>
@@ -61,6 +60,7 @@ export default function MyChats() {
         ):(
           <ChatLoading/>
         )}
+  
       </Box>
     </Box>
     </>

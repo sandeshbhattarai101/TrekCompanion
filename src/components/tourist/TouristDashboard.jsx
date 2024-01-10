@@ -3,6 +3,7 @@ import TouristNavbar from './TouristNavbar'
 import PopularDestination from './PopularDestination'
 import TopGuides from './TopGuides'
 import Footer from '../Footer'
+import ChatPage from '../myChats/ChatPage'
 
 
 
@@ -12,14 +13,15 @@ const TouristDashboard = () => {
 
  <TouristNavbar/>
  <div className='grid grid-cols-2'>
- <div className='bodyContainer' >
+ <div className='bodyContainer w-[78%]' >
  <PopularDestination/>
  <TopGuides/>
  </div>
- <div className='chatBox'>
+ <div className='chatBox mr-[1px] absolute right-0 w-[50%]'>
+ <ChatPage/>
+ </div>
  </div>
 
- </div>
 
  <Footer/>
 
