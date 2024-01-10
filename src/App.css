@@ -2,10 +2,23 @@
 #root{
    margin: 0;
    padding: 0;
-   background-color: white;
+   background-color: rgb(153, 185, 212);
 }
 /* for all fontawesome icon */
 .fontAwesomeIcon {
    margin-right: 10px;
 }
 
+
+::-webkit-scrollbar{
+   width: 0;
+}
+::-webkit-scrollbar-thumb{
+   background: rgba(136, 136, 136, 0.281);
+}
+
+/* handle on hover */
+
+::-webkit-scrollbar-thumb:hover{
+   background: #555;
+}

@@ -1,6 +1,6 @@
 import React from 'react'
-import "./about.css"
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 
 
@@ -47,6 +47,7 @@ export default function About() {
         </div>
     </div>
 </div>
+<Footer/>
     </>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import TouristNavbar from './TouristNavbar'
 import PopularDestination from './PopularDestination'
 import TopGuides from './TopGuides'
-import ChatBody from '../chat/chatBody/ChatBody'
+import Footer from '../Footer'
 
 
 
@@ -17,12 +17,11 @@ const TouristDashboard = () => {
  <TopGuides/>
  </div>
  <div className='chatBox'>
- <ChatBody/>
  </div>
 
  </div>
 
-
+ <Footer/>
 
  </>
   )

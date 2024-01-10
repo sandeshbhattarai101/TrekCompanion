@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import Navbar from './Navbar';
 import axios from 'axios';
 import PopularDestination from './tourist/PopularDestination';
+import Footer from './Footer';
 
 
 
@@ -29,7 +30,7 @@ return(
 
     <PopularDestination/>
 
-    
+    <Footer/>
   </>
 )
 }

@@ -48,6 +48,10 @@ export default function GuideSignup() {
                   <input type="password" id="password" name="password" required className="w-full p-2 border border-gray-300 rounded-md"/>
                </div>
                <div className="mb-5">
+                  <label className="block text-black font-bold">Rate Per Hour:</label>
+                  <input type="Number" id="rate" name="rate" required className="w-full p-2 border border-gray-300 rounded-md"/>
+               </div>
+               <div className="mb-5">
                   <input type="submit" value="register" className="w-full p-2 bg-blue-500 text-white cursor-pointer hover:bg-blue-700"/>
                </div>
                 <input type="hidden" value="guide" name='role'/>

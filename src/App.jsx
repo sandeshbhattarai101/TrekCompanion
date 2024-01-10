@@ -5,7 +5,6 @@ import UserLogin from './components/UserLogin';
 import UserSignup from './components/UserSignup';
 import GuideLogin from './components/GuideLogin';
 import GuideSignup from './components/GuideSignup';
-import Footer from './components/Footer';
 import Contact from './components/Contact';
 import About from './components/About';
 import ForgotPassword from './components/ForgotPassword';
@@ -18,7 +17,6 @@ import RedirectSignup from './components/RedirectSignup';
 import TouristDashboard from './components/tourist/TouristDashboard';
 import SingleDestination from './components/admin/SingleDestination';
 import DeleteDestination from './components/admin/deleteDestination';
-import { useParams } from 'react-router-dom';
 
 
 import {
@@ -28,13 +26,14 @@ import {
 } from "react-router-dom";
 import Profile from './components/profile/profile';
 import UpdateProfile from './components/profile/UpdateProfile';
+import ChatPage from './components/myChats/ChatPage';
 
 
 
 
 
 function App() {
-const params = useParams();
+
   
 
   return (
@@ -61,11 +60,12 @@ const params = useParams();
   <Route exact path='/admin' element={<AdminDashboard/>}/>
   <Route exact path='/tourist' element={<TouristDashboard/>}/>
   <Route exact path= '/profile' element={<Profile/>}/>
+  <Route exact path= '/chats' element={<ChatPage/>}/>
   <Route exact path='/updateProfile' element={<UpdateProfile/>}/>
   
 </Routes>
 
-<Footer/>
+
 </Router>
 
 
