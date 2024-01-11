@@ -19,7 +19,7 @@ import SingleDestination from './components/admin/SingleDestination';
 import DeleteDestination from './components/admin/deleteDestination';
 import Profile from './components/profile/profile';
 import UpdateProfile from './components/profile/UpdateProfile';
-import ChatPage from './components/myChats/ChatPage';
+import HomePage from './components/HomePage';
 
 
 import { ChatState } from './Context/ChatProvider';
@@ -112,7 +112,7 @@ function App() {
 
 
 
-  {/* <Route exact path= '/chats' element={<ChatPage/>}/> */}
+  <Route exact path= '/homepage' element={<HomePage/>}/>
 </Routes>
 </Router>
 </>

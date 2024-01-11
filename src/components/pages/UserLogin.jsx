@@ -6,9 +6,7 @@ import axios from 'axios'
 
 export default function UserLogin() {
    const navigate = useNavigate();
-
-   const[userRole, setUserRole] = useState({});
-
+   
    
    const loginUser = async (e)=>{
        e.preventDefault();
@@ -20,33 +18,14 @@ export default function UserLogin() {
         })
         
         if(response.status == 200){
+            navigate("/homepage")
             alert( response.data.message)
             
-        } else if(response.status == 404)
-        {
+        } else if(response.status == 404){
             alert( response.data.message)
         }
-        if(userRole == "tourist"){
-           navigate("/tourist");
-        } else if (userRole == "admin" ){
-            navigate("/admin");
-        }
-        
+
     }
-    
-       // FOR ROLE BASED ROUTING BETWEEN TOURIST AND ADMIN
-              
-        useEffect(()=>{
-          const getFormData = async()=>{
-            const response = await axios.get('http://localhost:3000/profile',{
-              withCredentials : true
-            })
-            setUserRole(response.data.data.role);
-            // console.log(response.data.data.role)
-          }
-          getFormData();
-          
-        },[])
 
 
 return (
