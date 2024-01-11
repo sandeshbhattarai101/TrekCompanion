@@ -14,17 +14,17 @@ const PopularDestination = () => {
   };
   const [destinations, setDestinations] = useState([]);
 
-  const fetchDestinations = async () => {
-    const response = await axios.get("http://localhost:3000/destinations");
-   // console.log(response.data.data);
-    if (response.status == 200) {
-      setDestinations(response.data.data);
-    } else {
-      alert("something went wrong");
-    }
-  };
-
+  
   useEffect(() => {
+    const fetchDestinations = async () => {
+      const response = await axios.get("http://localhost:3000/destinations");
+     // console.log(response.data.data);
+      if (response.status == 200) {
+        setDestinations(response.data.data);
+      } else {
+        alert("something went wrong");
+      }
+    };
     fetchDestinations();
   }, []);
   return (
@@ -42,7 +42,7 @@ const PopularDestination = () => {
                 src={destination.destinationImage}
                 alt="image"
               />
-              <h5 className="cardTitle font-bold  mt-2">
+              <h5 className="cardTitle font-bold  mt-2 lg:mr-12 ">
                 {destination.destinationName}
               </h5>
             </div>

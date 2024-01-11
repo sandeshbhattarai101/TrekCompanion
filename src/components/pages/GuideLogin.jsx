@@ -1,11 +1,12 @@
-
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Navbar from './Navbar';
 import axios from 'axios'
 
-export default function UserLogin() {
+export default function GuideLogin() {
    const navigate = useNavigate()
+
+   const[userRole, setUserRole] = useState({});
 
    const loginUser = async (e)=>{
        e.preventDefault();
@@ -18,13 +19,32 @@ export default function UserLogin() {
 
      if(response.status == 200){
          alert( response.data.message)
-         navigate("/")
+
+    if(userRole == "guide"){
+      return  navigate("/guide")
+    }else{
+        return <div className=' text-3xl text-gray-500 font-bold flex justify-center mt-40 '>404 Page not found</div>
+    }
         }
         else if(response.status == 404)
         {
             alert( response.data.message)
         }
     }
+
+ // FOR ROLE BASED ROUTING
+    
+  useEffect(()=>{
+    const getFormData = async()=>{
+      const response = await axios.get('http://localhost:3000/profile',{
+        withCredentials : true
+      })
+      setUserRole(response.data.data.role);
+      // console.log(response.data.data.role)
+    }
+    getFormData();
+    
+  },[])
 
 return (
    <>

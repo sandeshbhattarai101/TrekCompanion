@@ -44,7 +44,7 @@ export default function SingleDestination(){
       const previousData = await axios.get(`http://localhost:3000/destinations/${params.id}`)
      //console.log(previousData.data.data[0])
      
-      setEntries(previousData.data.data[0])
+      setEntries(previousData.data.data)
     
     }
     getFormData();

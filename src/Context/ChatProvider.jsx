@@ -17,8 +17,8 @@ useEffect(()=>{
     const response = await axios.get('http://localhost:3000/profile',{
       withCredentials : true
     })
-   // console.log(response.data)
-    setUser(response.data.data)
+    setUser(response.data.data);
+   // console.log(response.data.data)
   }
   getFormData();
 },[])

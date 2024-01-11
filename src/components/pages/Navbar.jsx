@@ -1,5 +1,5 @@
 import { useState} from 'react'
-import '../App.css'
+import '../../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChevronDown, faChevronUp} from '@fortawesome/free-solid-svg-icons'
 import {faMessage} from '@fortawesome/free-solid-svg-icons'

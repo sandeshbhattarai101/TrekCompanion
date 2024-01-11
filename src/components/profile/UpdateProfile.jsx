@@ -54,7 +54,7 @@ export default function UpdateProfile(){
     <>
     
 
-    <div className="mainDestination flex justify-center bg-white p-16 m-16 min-w-screen rounded-3xl w-2/4 m-auto mt-4 shadow-lg ">
+    <div className="mainDestination flex justify-center bg-white p-16 m-16 min-w-screen rounded-3xl w-2/4 mt-4 shadow-lg ">
     <form onSubmit={editProfile} className="w-full max-w-sm" method='post' encType='multipart/form-data'>
       <div className='block text-gray-800 text-lg font-bold mb-8 text-center'>Update your details</div>
      <div className="mb-4">

@@ -2,7 +2,7 @@ import React from 'react'
 import TouristNavbar from './TouristNavbar'
 import PopularDestination from './PopularDestination'
 import TopGuides from './TopGuides'
-import Footer from '../Footer'
+import Footer from '../../components/pages/Footer'
 import ChatPage from '../myChats/ChatPage'
 
 
@@ -12,7 +12,7 @@ const TouristDashboard = () => {
 <>
 
  <TouristNavbar/>
- <div className='grid grid-cols-2'>
+ <div className='grid grid-cols-2 w-full h-screen mb-32'>
  <div className='bodyContainer w-[78%]' >
  <PopularDestination/>
  <TopGuides/>
@@ -21,8 +21,6 @@ const TouristDashboard = () => {
  <ChatPage/>
  </div>
  </div>
-
-
  <Footer/>
 
  </>

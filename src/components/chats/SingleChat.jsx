@@ -11,7 +11,7 @@ export default function SingleChat() {
     const [ newMessage, setNewMessage] = useState();
 
     const toast = useToast();
-    const {user, selectedChat, setSelectedChat} = ChatState();
+    const { selectedChat, setSelectedChat} = ChatState();
 
 
     const fetchMessages = async()=>{

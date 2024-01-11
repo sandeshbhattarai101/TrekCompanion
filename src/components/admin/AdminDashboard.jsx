@@ -27,7 +27,7 @@ export default function AdminDashboard() {
     <div className='adminDashboard h-fit mb-20 w-screen '>
 <AdminNavbar/>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg top-10">
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
+    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
     <div className='tableheading flex flex-row font-semibold ml-8'>
         <h5 className='mr-12'>Image</h5>
         <h5 className='mr-12'>Name</h5>

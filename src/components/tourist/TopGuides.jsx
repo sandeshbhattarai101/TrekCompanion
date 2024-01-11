@@ -16,14 +16,13 @@ const PopularDestination = () => {
 
   const fetchDestinations = async () => {
     const response = await axios.get("http://localhost:3000/destinations");
-    console.log(response.data.data);
+   // console.log(response.data.data);
     if (response.status == 200) {
       setDestinations(response.data.data);
     } else {
       alert("something went wrong");
     }
   };
-
   useEffect(() => {
     fetchDestinations();
   }, []);
