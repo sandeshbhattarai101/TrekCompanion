@@ -9,7 +9,7 @@ const PopularDestination = () => {
     dots: false,
     infinite: false,
     speed: 400,
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 2,
   };
   const [destinations, setDestinations] = useState([]);

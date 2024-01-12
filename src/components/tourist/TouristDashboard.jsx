@@ -12,7 +12,7 @@ const TouristDashboard = () => {
 <>
 
  <TouristNavbar/>
- <div className='grid grid-cols-2 w-full h-screen mb-32'>
+ <div className='grid grid-cols-2 w-full h-[1000px] bg-slate-200'>
  <div className='bodyContainer w-[78%]' >
  <PopularDestination/>
  <TopGuides/>
