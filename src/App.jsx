@@ -22,6 +22,7 @@ import UpdateProfile from './components/profile/UpdateProfile';
 import ChatPage from './components/myChats/ChatPage';
 
 
+
 import { ChatState } from './Context/ChatProvider';
 import { useEffect, useState } from 'react';
 import {
@@ -94,6 +95,7 @@ function App() {
   <Route exact path='/verifyOtp' element={<VerifyOtp/>}/>
   <Route exact path='/contact' element={<Contact/>}/>
   <Route exact path='/about' element={<About/>}/>
+  
 
 
 {/* FOR ADMIN */}
