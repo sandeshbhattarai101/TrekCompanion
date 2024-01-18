@@ -3,6 +3,7 @@ import axios from "axios";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 const TopGuides = () => {
   const settings = {
@@ -38,7 +39,8 @@ const TopGuides = () => {
 
         { guides.map((guide) => {
           return (
-            <div key={guide._id} className="card-body  w-full pr-2 mb-1  rounded-2xl ">
+            <Link to={`/singleguide/${guide._id}`}>
+            <div  key={guide._id} className="card-body  w-full pr-2 mb-1  rounded-2xl ">
               <img
                 className="cardImage object-cover h-[160px] md:h-[240px] w-[220px] md:w-[260px] ml-2 rounded-xl shadow-sm "
                 src='../../public/images/guide.webp'
@@ -54,6 +56,7 @@ const TopGuides = () => {
                Rate: {guide.rate}
               </h5>
             </div>
+            </Link>
           );
         })
        

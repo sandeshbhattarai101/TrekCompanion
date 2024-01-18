@@ -24,7 +24,7 @@ export default function HomePage() {
   return (
     <>
     <div>
-       {userRole=="admin"?<AdminDashboard/>:(userRole=="tourist"?<TouristDashboard/>: <div className=' text-3xl text-gray-500 font-bold flex justify-center mt-40 '>404 Page not found</div> )}
+       {userRole=="admin"?<AdminDashboard/>:(userRole=="tourist"?<TouristDashboard/>: null )}
     </div>
     
     </>

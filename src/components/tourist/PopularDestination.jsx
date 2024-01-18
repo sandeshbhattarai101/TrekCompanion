@@ -9,7 +9,7 @@ const PopularDestination = () => {
     dots: false,
     infinite: false,
     speed: 400,
-    slidesToShow: 3,
+    slidesToShow: 6,
     slidesToScroll: 2,
   };
   const [destinations, setDestinations] = useState([]);
@@ -28,8 +28,8 @@ const PopularDestination = () => {
     fetchDestinations();
   }, []);
   return (
-    <div className="PopularDestinationCards h-fit left-24 top-10 mb-28 relative ">
-      <h1 className="mb-10 font-serif font-semi-bold text-3xl">
+    <div className="PopularDestinationCards h-fit left-[10px] top-10 mb-28 relative ">
+      <h1 className="mb-20 font-serif font-bold text-3xl text-center">
         Popular Destinations
       </h1>
 

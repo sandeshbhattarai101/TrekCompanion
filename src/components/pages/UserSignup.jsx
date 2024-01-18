@@ -55,7 +55,7 @@ export default function UserSignup() {
                <input type="hidden" value="tourist" name='role'/>
 
            </form>
-           <Link to="/loginForm">Already have an account?</Link>   
+           <Link to="/user/login">Already have an account?</Link>   
        </div>
        </div> 
    </>

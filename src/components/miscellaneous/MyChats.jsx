@@ -47,7 +47,7 @@ export default function MyChats() {
         <h1 className=' pb-8 px-3 text-[28px] md:text-[30px] font-sans flex w-full justify-between items-center'>My Chats</h1> 
         {chats ? (
           <Stack className='overflow-y-scroll'>
-            {chats.map((chat)=>(
+            { chats.length !==0 &&  chats.map((chat)=>(
               <Box key={chat._id} onClick={()=> setSelectedChat(chat)} bg={selectedChat === chat ? "#475569" : "#64748b"} color={selectedChat === chat ? "white" : "black"} className='cursor-pointer px-3 py-5 rounded-lg  '>
                 <Text>
                   {getSender(loggedUser, chat.users)}
