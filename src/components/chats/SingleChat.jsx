@@ -87,7 +87,7 @@ export default function SingleChat() {
         <Text fontSize={{base:"28px", md:"30px"}} pb={3} px={2} w="100%" fontFamily="Work sans" d="flex" justifyContent={{base: "space-between"}} alignItems="center" >
             <IconButton d={{base: "flex", md:"none"}} icon={<ArrowBackIcon/>} onClick={()=> setSelectedChat("")}/>
         </Text>
-        <Box className='flex flex-col justify-end' p={3}  bg="#E8E8E8" w="100%" h="91.5%" borderRadius="lg" overflowY="hidden" >
+        <Box className='flex flex-col justify-end' p={3}  bg="#fae6d5" w="100%" h="91.5%" borderRadius="lg" overflowY="hidden" >
             {loading ? (
                 <Spinner size="xl" w={20} h={20} alignSelf="center" margin="auto"  />
             ):(
@@ -97,7 +97,7 @@ export default function SingleChat() {
                )}
 
             <FormControl onKeyDown={sendMessage} isRequired > 
-            <Input variant="filled"  placeholder='Enter a message...' onChange={typingHandler} value={newMessage} />
+            <Input my={3} variant="filled"  placeholder='Enter a message...' onChange={typingHandler} value={newMessage} />
             </FormControl>
             
         </Box>

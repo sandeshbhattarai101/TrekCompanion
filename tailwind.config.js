@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      colors:{
+        "cream":"rgba(250,230,213,0.7)",
+        "darkcream":"rgba(218, 174, 135, 0.7);"
+      }
  
     },
   },
