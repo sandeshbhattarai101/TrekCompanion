@@ -26,7 +26,7 @@ export default function singleGuide() {
       }, 0);
     
       // Calculate the average
-      const average = sumOfRatings / review.length;
+      const average = (sumOfRatings / review.length).toFixed(1);
     
       setAvgRating(average);
 
@@ -54,7 +54,7 @@ export default function singleGuide() {
          }
          
         })
-        navigate("/tourist")
+        navigate("/homepage")
        // console.log(response)
       }
 
@@ -74,6 +74,8 @@ useEffect(()=>{
         fetchGuide();
 
     },[])
+
+    
      useEffect(()=>{
 
        handleAvgRating();
@@ -154,7 +156,7 @@ useEffect(()=>{
             </div>
           </div>
         </div>
-      )}          <Link to={`/orders/${guide._id}`}>
+      )}          <Link to={`/checkout/${guide._id}`}>
             <button className="bg-teal-800 hover:bg-teal-700 text-white font-semi-bold py-2 px-4 rounded-md w-full">
               Select Guide
             </button>

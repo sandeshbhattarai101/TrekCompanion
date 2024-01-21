@@ -30,10 +30,12 @@ import {
   Routes,
 } from "react-router-dom";
 import axios from 'axios';
-import SingleChat from './components/chats/SingleChat';
-import OrderGuide from './components/tourist/OrderGuide';
+//import SingleChat from './components/chats/SingleChat';
+//import OrderGuide from './components/tourist/OrderGuide';
 import OneDestination from './components/tourist/OneDestination';
 import GuideDashboard from './components/guide/guideDashboard';
+import CheckOut from './components/tourist/CheckOut';
+import KhaltiSuccess from './components/tourist/KhaltiSuccess';
 
 
 
@@ -122,7 +124,8 @@ function App() {
   <Route exact path={'/singleguide/:id'} element={ <TouristElement><SingleGuide/></TouristElement>  }/>
   <Route exact path= '/profile' element={<TouristElement><Profile/></TouristElement>}/>
   <Route exact path='/updateProfile' element={<TouristElement><UpdateProfile/></TouristElement>}/>
-  <Route exact path='/orders/:id' element={<TouristElement><OrderGuide/></TouristElement>}/>
+  <Route exact path='/checkout/:id' element={<TouristElement><CheckOut/></TouristElement>}/>
+  <Route exact path='/success' element={ <TouristElement><KhaltiSuccess/></TouristElement>  }/>
 
 
 
