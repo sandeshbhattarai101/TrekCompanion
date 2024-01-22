@@ -5,6 +5,7 @@ import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function SearchBar() {
 
@@ -29,14 +30,19 @@ export default function SearchBar() {
       }
   
       setLoading(true);
-      const response = await axios.get(`http://localhost:3000/api/tourist/destination?search=${search}`,{
-        withCredentials: true
+      const response = await axios.get(`http://localhost:3000/tourist/destination?search=${search}`,{
+        withCredentials: true,
+        headers:{
+          "Content-Type": "application/json",
+        }
       })
-      setLoading(false);
-      setSearchResult(response);
       console.log(response)
-    
+
+      setLoading(false);
+      setSearchResult(response.data.data);
+      
     };
+  //  console.log(response)
 
     return (
           <>
@@ -61,8 +67,21 @@ export default function SearchBar() {
   
           {loading ? <ChatLoading/> :
           (
-            searchResult?.map((destination) =>(
-               <UserListItem key={destination._id}  />
+          
+            searchResult.map((destination) => (
+          <Link to={`/oneDestination/${destination._id}`}>
+          <div key={destination._id} className="card-body  flex flex-row bg-cream hover:bg-darkcream mb-2 rounded-xl shadow-md">
+          
+              <img
+                className="cardImage object-cover h-16 w-16 p-1 rounded-xl mr-3"
+                src={destination.destinationImage}
+                alt="destination"
+            />
+            <h5 className="cardTitle font-bold mt-4 text-teal-800">
+              {destination.destinationName}
+            </h5>
+          </div>
+          </Link>
             ))
           )}
   

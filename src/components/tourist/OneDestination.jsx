@@ -53,12 +53,12 @@ const OneDestination = () => {
       {loading && <p>Loading...</p>}
       {error && <p className="text-red-500">{error}</p>}
       {Object.keys(destination).length > 0 && (
-        <div className="bg-teal-100 md:bg-teal-300 rounded-lg p-8 shadow-lg">
+        <div className="bg-teal-100 md:bg-white rounded-lg p-8 shadow-lg">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-teal-800">
             {destination.destinationName}
           </h1>
           <img
-            className="w-full h-auto mb-6 rounded-lg shadow-md"
+            className="w-100 h-100 mb-6 rounded-lg shadow-md"
             src={destination.destinationImage}
             alt="Destination Image"
           />
@@ -82,10 +82,10 @@ const OneDestination = () => {
             </div>
           </div>
           <Link
-            to="/"
+            to="/homepage"
             className="text-teal-600 mt-8 inline-block underline hover:text-teal-800"
           >
-            Back to Destinations
+            Back to Homepage
           </Link>
         </div>
       )}

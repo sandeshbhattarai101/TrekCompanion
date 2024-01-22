@@ -43,12 +43,12 @@ export default function MyChats() {
     <Box className='bg-slate-300 shadow-xl border-slate-400 border-2 ' d={{ base: selectedChat ? "none" : "flex", md:"flex"  }} flexDir="column" alignItems="center" p={3}  w={{base:"100%", md:"31%"}} borderRadius="lg"  >
 
       
-      <Box className='flex flex-col p-3 bg-cream w-full h-[100%] rounded-lg overflow-y-hidden' >
+      <Box className='flex flex-col p-3 bg-slate-300 w-full h-[100%] rounded-lg overflow-y-hidden' >
         <h1 className=' pb-8 px-3 text-[28px] md:text-[30px] font-sans flex w-full justify-between items-center'>My Chats</h1> 
         {chats ? (
           <Stack className='overflow-y-scroll'>
             { chats.length !==0 &&  chats.map((chat)=>(
-              <Box key={chat._id} onClick={()=> setSelectedChat(chat)} bg={selectedChat === chat ? "#00796B" : "#00897B"} color={selectedChat === chat ? "white" : "black"} className='cursor-pointer px-3 py-5 rounded-lg  '>
+              <Box key={chat._id} onClick={()=> setSelectedChat(chat)} bg={selectedChat === chat ? "#7b8a99" : "#708090"} color={selectedChat === chat ? "white" : "black"} className='cursor-pointer px-3 py-5 rounded-lg  '>
                 <Text>
                   {getSender(loggedUser, chat.users)}
                 </Text>

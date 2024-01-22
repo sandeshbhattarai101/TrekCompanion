@@ -15,6 +15,7 @@ export default function KhaltiSuccess() {
 
     const [loading, setLoading] = useState(true);
 
+    useEffect(()=>{
     const verifyPidx = async()=>{
       
     try {
@@ -27,15 +28,14 @@ export default function KhaltiSuccess() {
 
         if(response.status == 200){
             setLoading(false)
-            alert("Payment Verified Successfully")
             navigate('/homepage')
+            alert("Payment Verified Successfully")
         }
       } catch (error) {
         console.log(error)
       }
      }
       
-    useEffect(()=>{
         verifyPidx();
     },[])
 
