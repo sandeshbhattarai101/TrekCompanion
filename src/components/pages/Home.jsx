@@ -1,15 +1,45 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import PopularDestination from '../tourist/PopularDestination';
 import Footer from './Footer';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
 
 
 
 export default function Mybody() {
+
+  const[userRole, setUserRole] = useState({});
+
+  
+  const navigate = useNavigate();
+
+  if(userRole == "tourist" || userRole == "admin"){
+   navigate("/homepage")
+  }else if(userRole == "guide"){
+    navigate("/guide")
+  }else{
+  navigate("/")
+  }
+  
+
+
+  useEffect(()=>{
+    const getFormData = async()=>{
+      const response = await axios.get('http://localhost:3000/profile',{
+        withCredentials : true
+      })
+      setUserRole(response.data.data.role);
+      // console.log(response.data.data.role)
+    }
+    getFormData();
+    
+  },[])
+
 
 return(
   <>

@@ -30,8 +30,12 @@ import {
   Routes,
 } from "react-router-dom";
 import axios from 'axios';
-import SingleChat from './components/chats/SingleChat';
-import OrderGuide from './components/tourist/OrderGuide';
+//import SingleChat from './components/chats/SingleChat';
+//import OrderGuide from './components/tourist/OrderGuide';
+import OneDestination from './components/tourist/OneDestination';
+import GuideDashboard from './components/guide/guideDashboard';
+import CheckOut from './components/tourist/CheckOut';
+import KhaltiSuccess from './components/tourist/KhaltiSuccess';
 
 
 
@@ -59,8 +63,15 @@ function App() {
   //     return <> {children} </>
   //   }
   //  }
+  function GuideElement({children}){
+    if( !userRole === "guide"){
+      return undefined
+    }else{
+      return <> {children} </>
+    }
+    }
   function TouristElement({children}){
-    if( !userRole === "tourist" || !userRole === "guide"){
+    if( !userRole === "tourist"){
       return undefined
     }else{
       return <> {children} </>
@@ -109,15 +120,21 @@ function App() {
 
 {/* FOR TOURIST */}
   
-  <Route exact path='/tourist' element={ <TouristElement><TouristDashboard/></TouristElement>  }/>
+  <Route exact path='/homepage' element={ <TouristElement><HomePage/></TouristElement>  }/>
+  <Route exact path='/oneDestination/:id' element={ <TouristElement><OneDestination/></TouristElement>  }/>
   <Route exact path={'/singleguide/:id'} element={ <TouristElement><SingleGuide/></TouristElement>  }/>
   <Route exact path= '/profile' element={<TouristElement><Profile/></TouristElement>}/>
   <Route exact path='/updateProfile' element={<TouristElement><UpdateProfile/></TouristElement>}/>
-  <Route exact path='/orders/:id' element={<TouristElement><OrderGuide/></TouristElement>}/>
+  <Route exact path='/checkout/:id' element={<TouristElement><CheckOut/></TouristElement>}/>
+  <Route exact path='/success' element={ <TouristElement><KhaltiSuccess/></TouristElement>  }/>
 
 
 
-  <Route exact path= '/homepage' element={<HomePage/>}/>
+{/* FOR GUIDE */}
+  <Route exact path='/guide' element={ <GuideElement><GuideDashboard/></GuideElement>  }/>
+
+
+
 </Routes>
 </Router>
 </>

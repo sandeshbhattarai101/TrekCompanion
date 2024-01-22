@@ -6,63 +6,45 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 
 const TopGuides = () => {
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 400,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-  };
   const [guides, setGuides] = useState([]);
-    
- useEffect(()=>{
 
-  const getUsersData = async()=>{
-    const response = await axios.get('http://localhost:3000/guides',{
-      withCredentials : true
-    })
-    
-    setGuides(response.data.data);
-    
-    
-  }
-  getUsersData();
-  
-},[])
+
+  useEffect(() => {
+    const getUsersData = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/guides", {
+          withCredentials: true,
+        });
+
+        setGuides(response.data.data);
+      } catch (error) {
+        console.error("Error fetching guides:", error);
+      }
+    };
+
+    getUsersData();
+  }, []);
 
   return (
-    <div className="topGuideCards absolute w-[40%]  left-24 bottom-100 ">
-      <h1 className="mb-10 font-serif font-semi-bold text-3xl">
-        Top Guides
-      </h1>
-      <Slider {...settings} >
+    <div className="container mx-auto mt-10">
+      <h1 className="text-3xl text-teal-700 font-bold text-center mb-20">Top Guides</h1>
 
-        { guides.map((guide) => {
-          return (
-            <Link to={`/singleguide/${guide._id}`}>
-            <div  key={guide._id} className="card-body  w-full pr-2 mb-1  rounded-2xl ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 xl:gap-28 justify-evenly">
+        {guides.length!=0 && guides.map((guide) => (
+          <Link to={`/singleguide/${guide._id}`} key={guide._id}>
+            <div className="card-body bg-teal-700 p-4 rounded-3xl shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2">
               <img
-                className="cardImage object-cover h-[160px] md:h-[240px] w-[220px] md:w-[260px] ml-2 rounded-xl shadow-sm "
-                src='../../public/images/guide.webp'
-                alt="image"
+                className="w-full h-48 object-cover object-center rounded-md mb-4"
+                src="../../public/images/guide.webp"
+                alt="Guide"
               />
-              <h5 className="guideName font-bold  mt-2 ml-2">
-               Name: {guide.username}
-              </h5>
-              <h5 className="guideName font-bold  mt-2 ml-2">
-               Email: {guide.email}
-              </h5>
-              <h5 className="guideName font-bold  mt-2 ml-2">
-               Rate: {guide.rate}
-              </h5>
+              <h5 className="text-gray-200  text-lg font-bold mb-2">{guide.username}</h5>
+              <p className="text-gray-200  mb-2">{guide.email}</p>
+              <p className="text-gray-200 font-bold">Rate: Rs {guide.rate} /Day</p>
             </div>
-            </Link>
-          );
-        })
-       
-      
-      }
-      </Slider>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

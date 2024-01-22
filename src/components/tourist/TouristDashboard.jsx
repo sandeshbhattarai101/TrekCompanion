@@ -11,17 +11,21 @@ const TouristDashboard = () => {
   return (
 <>
 
+<div className='bg-cream'>
+
  <TouristNavbar/>
- <div className='grid grid-cols-2 w-full h-[1000px] bg-slate-200'>
- <div className='bodyContainer w-[78%]' >
+ <div className='grid grid-cols-2 w-full h-fit mb-20'>
+ <div className='bodyContainer w-screen' >
  <PopularDestination/>
- <TopGuides/>
+ <TopGuides />
  </div>
- <div className='chatBox mr-[1px] absolute right-0 w-[50%]'>
+ <div className='chatBox mr-[1px] absolute right-0 '>
  <ChatPage/>
  </div>
  </div>
  <Footer/>
+
+</div>
 
  </>
   )

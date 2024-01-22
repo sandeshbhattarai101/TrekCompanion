@@ -48,7 +48,7 @@ export default function MyChats() {
         {chats ? (
           <Stack className='overflow-y-scroll'>
             { chats.length !==0 &&  chats.map((chat)=>(
-              <Box key={chat._id} onClick={()=> setSelectedChat(chat)} bg={selectedChat === chat ? "#475569" : "#64748b"} color={selectedChat === chat ? "white" : "black"} className='cursor-pointer px-3 py-5 rounded-lg  '>
+              <Box key={chat._id} onClick={()=> setSelectedChat(chat)} bg={selectedChat === chat ? "#7b8a99" : "#708090"} color={selectedChat === chat ? "white" : "black"} className='cursor-pointer px-3 py-5 rounded-lg  '>
                 <Text>
                   {getSender(loggedUser, chat.users)}
                 </Text>
