@@ -57,7 +57,7 @@ export default function GuideSignup() {
                 <input type="hidden" value="guide" name='role'/>
             
            </form>
-           <Link to="/loginForm">Already have an account?</Link>   
+           <Link to="/guide/login">Already have an account?</Link>   
        </div>
        </div> 
    </>

@@ -56,7 +56,6 @@ return(
              Let us know what we can do to improve TrekCompanion.</p>
 
              <input  type="submit" value="Send Message" className='sendMessage mb-1 mt-2  h-10 rounded border-custom-gray border  bg-slate-600 text-white text-lg w-36'/>
-
         </form>
     </div>
         
@@ -79,4 +78,6 @@ return(
     
 )
 }
+
+
 

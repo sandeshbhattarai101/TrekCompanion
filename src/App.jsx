@@ -15,15 +15,14 @@ import AdminDashboard from './components/admin/adminDashboard';
 import RedirectLogin from './components/pages/RedirectLogin';
 import RedirectSignup from './components/pages/RedirectSignup';
 import TouristDashboard from './components/tourist/TouristDashboard';
+import SingleGuide from './components/tourist/SingleGuide';
 import SingleDestination from './components/admin/SingleDestination';
 import DeleteDestination from './components/admin/deleteDestination';
 import Profile from './components/profile/profile';
 import UpdateProfile from './components/profile/UpdateProfile';
-import ChatPage from './components/myChats/ChatPage';
+import HomePage from './components/HomePage';
 
 
-
-import { ChatState } from './Context/ChatProvider';
 import { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
@@ -31,6 +30,8 @@ import {
   Routes,
 } from "react-router-dom";
 import axios from 'axios';
+import SingleChat from './components/chats/SingleChat';
+import OrderGuide from './components/tourist/OrderGuide';
 
 
 
@@ -53,25 +54,25 @@ function App() {
   },[])
   
   
-  function PublicElement({children}){
-    if(!user){
-      return <> {children} </>
-    }
-   }
+  // function PublicElement({children}){
+  //   if(!user){
+  //     return <> {children} </>
+  //   }
+  //  }
   function TouristElement({children}){
-    if( userRole === "tourist"){
-      return <> {children} </>
+    if( !userRole === "tourist" || !userRole === "guide"){
+      return undefined
     }else{
-      return <div className=' text-3xl text-gray-500 font-bold flex justify-center mt-40 '>404 Page not found</div>
+      return <> {children} </>
     }
-   }
+    }
 
 
    function AdminElement({children}){
-    if( userRole === "admin"){
-     return <> {children} </>
+    if(!userRole === "admin"){
+     return undefined
     }else{
-      return <div className=' text-3xl text-gray-500 font-bold flex justify-center mt-40 '>404 Page not found</div>
+      return <> {children} </>
     }
    }
 
@@ -83,7 +84,7 @@ function App() {
 <Router>
 <Routes>
   
-  <Route exact path='/' element={ <PublicElement><Home/></PublicElement> }/>
+  <Route exact path='/' element={ <Home/> }/>
   <Route exact path='/redirectlogin' element={<RedirectLogin/>}/>
   <Route exact path='/redirectsignup' element={<RedirectSignup/>}/>
   <Route exact path='/user/login' element={<UserLogin/>}/>
@@ -109,12 +110,14 @@ function App() {
 {/* FOR TOURIST */}
   
   <Route exact path='/tourist' element={ <TouristElement><TouristDashboard/></TouristElement>  }/>
+  <Route exact path={'/singleguide/:id'} element={ <TouristElement><SingleGuide/></TouristElement>  }/>
   <Route exact path= '/profile' element={<TouristElement><Profile/></TouristElement>}/>
   <Route exact path='/updateProfile' element={<TouristElement><UpdateProfile/></TouristElement>}/>
+  <Route exact path='/orders/:id' element={<TouristElement><OrderGuide/></TouristElement>}/>
 
 
 
-  {/* <Route exact path= '/chats' element={<ChatPage/>}/> */}
+  <Route exact path= '/homepage' element={<HomePage/>}/>
 </Routes>
 </Router>
 </>

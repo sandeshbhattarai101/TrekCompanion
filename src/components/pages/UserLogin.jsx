@@ -6,9 +6,7 @@ import axios from 'axios'
 
 export default function UserLogin() {
    const navigate = useNavigate();
-
-   const[userRole, setUserRole] = useState({});
-
+   
    
    const loginUser = async (e)=>{
        e.preventDefault();
@@ -20,33 +18,14 @@ export default function UserLogin() {
         })
         
         if(response.status == 200){
+            navigate("/homepage")
             alert( response.data.message)
             
-        } else if(response.status == 404)
-        {
+        } else if(response.status == 404){
             alert( response.data.message)
         }
-        if(userRole == "tourist"){
-           navigate("/tourist");
-        } else if (userRole == "admin" ){
-            navigate("/admin");
-        }
-        
+
     }
-    
-       // FOR ROLE BASED ROUTING BETWEEN TOURIST AND ADMIN
-              
-        useEffect(()=>{
-          const getFormData = async()=>{
-            const response = await axios.get('http://localhost:3000/profile',{
-              withCredentials : true
-            })
-            setUserRole(response.data.data.role);
-            // console.log(response.data.data.role)
-          }
-          getFormData();
-          
-        },[])
 
 
 return (
@@ -69,7 +48,7 @@ return (
            </div>
        </form>
        <div className="flex flex-col justify-center items-center">
-       <Link to="/signupForm"> <button className="text-white bg-slate-500 p-2 mb-3 rounded-md hover:bg-slate-600" type="submit" >Create new account</button> </Link> 
+       <Link to="/guide/signup"> <button className="text-white bg-slate-500 p-2 mb-3 rounded-md hover:bg-slate-600" type="submit" >Create new account</button> </Link> 
       <Link to="/forgotPassword"  className='text-slate-500 hover:text-slate-700'>Forgot Password ? </Link> 
        </div>
       </div>
