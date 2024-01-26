@@ -69,6 +69,7 @@ useEffect(()=>{
     })
     setGuide(response.data.data.guide)
     setReview(response.data.data.review)
+    console.log(response.data.data)
   }
 
         fetchGuide();

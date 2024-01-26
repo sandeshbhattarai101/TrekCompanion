@@ -44,7 +44,7 @@ export default function Mybody() {
 return(
   <>
    <Navbar title="TrekCompanion" company="Company" help="Help" explore="Explore"/>
-<div className='mainBody bg-[url("../public/images/bodywallpaper.jpg")] bg-no-repeat bg-cover bg-center h-[600px] md:h-[600px] w-screen flex flex-row mb-[100px]  ' >
+<div className='mainBody bg-[url("../public/images/bodywallpaper.jpg")] bg-no-repeat bg-cover bg-center h-[900px] md:h-[900px] w-screen  ' >
   <div className='mainBodyContainer flex flex-col absolute top-36 left-24 bg-white opacity-80 w-170 h-62 p-7 rounded-3xl '>
   <div className="bodyParagraph mt-1 ml-1">
         <h1 className='text-3xl font-semibold'>Guide with us and get paid.</h1>
@@ -58,48 +58,33 @@ return(
     </div>
  </div>
 
-    <PopularDestination/>
-  
-
+    <PopularDestination />
 
     {/* About Us */}
 
 
-    
 
-
-
-
-<div className="relative bg-cover bg-center bg-opacity-50  w-full m-auto mt-[200px] p-20 text-white" style={{ backgroundImage: `url('../public/images/badimalika.jpg')` }}>
-  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-teal"></div>
-  <div className="absolute inset-0 bg-black opacity-40"></div>
-  <h1 className='font-extrabold text-4xl my-1 mb-8 relative z-10'>About Us</h1>
-  <p className='text-justify text-xl leading-6 mb-3 max-w-3xl relative z-10'>TrekCompanion is a platform designed to connect tourists with independent trekking guides. We aim to provide a better trekking experience by eliminating the hassle of searching for a guide. Our system is a web-based application that uses MERN technology to provide user interface and user experience along with the database that would hold the credentials of the registered users as well as all the resources that make up the system.</p>
+{/* <div className="relative bg-cover bg-center bg-opacity-50  w-full m-auto  p-20 text-white" style={{ backgroundImage: `url('../public/images/badimalika.jpg')` }}> */}
+<div className="relative flex flex-col h-[450px] w-[98%]  bg-gradient-to-r from-teal-600  via-90% to-indigo-200  m-auto mt-10  p-20 text-gray-200 rounded-xl" >
+  <div className="absolute inset-0 "></div>
+  <h1 className='font-extrabold text-5xl my-1 mb-8 relative z-10'>About Us</h1>
+  <p className='text-justify font-semibold text-xl leading-6 mb-3 max-w-3xl relative z-10'>TrekCompanion is a platform designed to connect tourists with independent trekking guides. We aim to provide a better trekking experience by eliminating the hassle of searching for a guide. Our system is a web-based application that uses MERN technology to provide user interface and user experience along with the database that would hold the credentials of the registered users as well as all the resources that make up the system.</p>
   
   
   <Link to={"/About"}>
   <div className="relative z-10">
    
-    <button className="button bg-teal-700 border-none py-3 px-6 text-white text-center no-underline inline-block text-base my-1 mx-0.5 mt-5 cursor-pointer rounded-3xl w-full md:w-auto hover:bg-white  hover:text-black">More about us</button>
+    <button className="button bg-teal-700 border-none py-3 px-6 text-white text-center no-underline inline-block text-base my-1 mx-0.5 mt-5 cursor-pointer shadow-md rounded-3xl w-full md:w-auto hover:bg-teal-800 ">More about us</button>
    
   </div>
   </Link>
 </div>
 
 
-
-
-
-   
-
-   
-
-
-
     <div className="our-team  w-3/4  pl-20 mb-10 ">
-    <h2 className='font-bold text-[50px] text-center mt-20 ml-60 mb-28'>Our Team</h2>
+    <h2 className='font-bold text-[50px] text-teal-800 mt-20  mb-28'>Our Team</h2>
     <div className="row grid grid-cols-1 xl:grid-cols-2 gap-20 ">
-               <div className="container py-0.5 px-4 m-7 flex felx-row  ">
+               <div className="container py-0.5 px-4 flex felx-row  ">
                <img className='w-40 h-40 lg:w-52 lg:h-52  rounded-[50%] shadow-none hover:shadow-md' src='../../images/binit.jpg' alt="Team Member 1"/>
                   <div className='ml-20'>
                    <p className='text-3xl mb-5'><strong>BINIT GAUTAM</strong></p>
@@ -110,7 +95,7 @@ return(
                </div>
                <p className='text-xl ml-16 w-[500px]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas ut architecto fuga dolorem corrupti sunt, quos delectus adipisci. Placeat, distinctio quod earum optio repudiandae facere consequuntur nemo voluptatibus ducimus non.fuga dolorem corrupti sunt, quos delectus adipisci. Placeat, distinctio quod earum optio repudiandae facere consequuntur nemo voluptatibus ducimus non.</p>
 
-               <div className="container py-0.5 px-4 m-7 flex flex-row">
+               <div className="container py-0.5 px-4  flex flex-row">
                <img className='w-40 h-40 lg:w-52 lg:h-52 rounded-[50%] shadow-none hover:shadow-md ' src='../../images/sandesh.jpg' alt="Team Member 1"/>
                <div className='ml-20 '>
                    <p  className='text-3xl mb-5'><strong>SANDESH BHATTARAI</strong></p>
@@ -121,7 +106,7 @@ return(
                </div>
                <p className='text-xl ml-16 w-[500px]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas ut architecto fuga dolorem corrupti sunt, quos delectus adipisci. Placeat, distinctio quod earum optio repudiandae facere consequuntur nemo voluptatibus ducimus non.fuga dolorem corrupti sunt, quos delectus adipisci. Placeat, distinctio quod earum optio repudiandae facere consequuntur nemo voluptatibus ducimus non.</p>
 
-               <div className="container py-0.5 px-4 m-7 flex flex-row ">
+               <div className="container py-0.5 px-4 flex flex-row ">
                <img className='w-40 h-40 lg:w-52 lg:h-52 rounded-[50%] shadow-none hover:shadow-md' src='../../images/sandip.jpg' alt="Team Member 1"/>
                <div className='ml-20'>
                    <p className='text-3xl mb-5'><strong>SANDIP REGMI BAGALE</strong> </p>

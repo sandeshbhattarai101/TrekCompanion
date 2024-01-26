@@ -45,8 +45,9 @@ const PopularDestination = () => {
   }, []);
 
   return (
-    <div className="PopularDestinationCards mt-10 mb-16 mx-auto max-w-7xl">
-      <h1 className="text-3xl font-bold text-center mb-10 text-teal-700">
+    <>
+    <div className="PopularDestinationCards  mt-20 mb-10 mx-auto max-w-7xl">
+      <h1 className="text-3xl  font-bold text-center mb-10 text-teal-700">
         Popular Destinations
       </h1>
 
@@ -67,6 +68,7 @@ const PopularDestination = () => {
         ))}
       </Slider>
     </div>
+    </>
   );
 };
 
