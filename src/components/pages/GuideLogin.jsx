@@ -62,11 +62,11 @@ return (
                <input type="password" id="password" name="password" required className="w-full p-2 border border-gray-300 rounded-md"/>
            </div>
            <div className="mb-5">
-               <input type="submit" value="login" className="w-full p-2 bg-slate-500 text-white cursor-pointer hover:bg-slate-700 rounded-lg"/>
+               <input type="submit" value="login" className="w-full p-2 bg-teal-700 text-white cursor-pointer hover:bg-teal-800 rounded-lg"/>
            </div>
        </form>
        <div className="flex flex-col justify-center items-center">
-       <Link to="/signupForm"> <button className="text-white bg-slate-500 p-2 mb-3 rounded-md hover:bg-slate-600" type="submit" >Create new account</button> </Link> 
+       <Link to="/signupForm"> <button className="text-white bg-teal-700 p-2 mb-3 rounded-md hover:bg-teal-800" type="submit" >Create new account</button> </Link> 
       <Link to="/forgotPassword"  className='text-slate-500 hover:text-slate-700'>Forgot Password ? </Link> 
        </div>
       </div>

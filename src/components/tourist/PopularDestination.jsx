@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const PopularDestination = () => {
   const settings = {
     dots: false,
-    infinite: false,
+      infinite: false,
     speed: 400,
     slidesToShow: 4, // Adjust the number of slides to show based on your design
     slidesToScroll: 1,
@@ -71,3 +71,5 @@ const PopularDestination = () => {
 };
 
 export default PopularDestination;
+
+
