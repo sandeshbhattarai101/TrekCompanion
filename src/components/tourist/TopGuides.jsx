@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Rating } from 'react-simple-star-rating'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
+import StarRating from "../globalComponent/StarRating";
 
 const TopGuides = () => {
   const [guides, setGuides] = useState([]);
@@ -39,10 +39,9 @@ const TopGuides = () => {
                 src="../../public/images/guide.webp"
                 alt="Guide"
               />
-              <h5 className="text-gray-200  text-lg font-bold mb-2">{guide.username}</h5>
+              <h5 className="text-gray-200 flex text-lg font-bold mb-2">{guide.username}<StarRating stars={guide.rating} rating={guide.rating}/></h5>
               <p className="text-gray-200  mb-2">{guide.email}</p>
               <p className="text-gray-200 font-bold">Rate: Rs {guide.rate} /Day</p>
-              <p className="text-gray-200 font-bold"> Rating: {guide.rating} /5</p>
             </div>
           </Link>
         ))}
