@@ -66,7 +66,7 @@ return (
            </div>
        </form>
        <div className="flex flex-col justify-center items-center">
-       <Link to="/signupForm"> <button className="text-white bg-teal-700 p-2 mb-3 rounded-md hover:bg-teal-800" type="submit" >Create new account</button> </Link> 
+       <Link to="/guide/signup"> <button className="text-white bg-slate-500 p-2 mb-3 rounded-md hover:bg-slate-600" type="submit" >Create new account</button> </Link> 
       <Link to="/forgotPassword"  className='text-slate-500 hover:text-slate-700'>Forgot Password ? </Link> 
        </div>
       </div>
