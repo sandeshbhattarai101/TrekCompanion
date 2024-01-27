@@ -2,6 +2,7 @@ import { useDisclosure } from '@chakra-ui/react';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import StarRating from '../globalComponent/StarRating';
 
 export default function singleGuide() {
   
@@ -108,7 +109,7 @@ useEffect(()=>{
             </div>
             <div className="flex items-center justify-between">
               <span className="text-gray-600">Review:</span>
-              <span className="text-gray-800">{avgRating}/5</span>
+              <span className="text-gray-800"><StarRating stars={avgRating} rating={avgRating}/></span>
             </div>
 
          <div className="px-6 py-4 flex flex-row gap-10">
