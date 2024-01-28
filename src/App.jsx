@@ -21,6 +21,7 @@ import DeleteDestination from './components/admin/deleteDestination';
 import Profile from './components/profile/profile';
 import UpdateProfile from './components/profile/UpdateProfile';
 import HomePage from './components/HomePage';
+import RecommendDestination from './components/tourist/recommendDestination';
 
 
 import { useEffect, useState } from 'react';
@@ -33,7 +34,7 @@ import axios from 'axios';
 //import SingleChat from './components/chats/SingleChat';
 //import OrderGuide from './components/tourist/OrderGuide';
 import OneDestination from './components/tourist/OneDestination';
-import GuideDashboard from './components/guide/guideDashboard';
+import GuideDashboard from './components/guide/GuideDashboard';             
 import CheckOut from './components/tourist/CheckOut';
 import KhaltiSuccess from './components/tourist/KhaltiSuccess';
 
@@ -107,6 +108,8 @@ function App() {
   <Route exact path='/verifyOtp' element={<VerifyOtp/>}/>
   <Route exact path='/contact' element={<Contact/>}/>
   <Route exact path='/about' element={<About/>}/>
+  <Route exact path='/recommend/destination' element={<RecommendDestination/>}/>
+  
   
 
 

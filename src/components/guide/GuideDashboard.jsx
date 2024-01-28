@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import GuideNavbar from './guideNavbar'
 import ChatBox from '../miscellaneous/ChatBox'
-import { Box, Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
+import { Box, Button, Flex, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
 import { ChatState } from '../../Context/ChatProvider';
 import MyChats from '../miscellaneous/MyChats'
 import axios from 'axios'
@@ -47,7 +47,7 @@ export default function GuideDashboard() {
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
 Notification
   </MenuButton>
-  <MenuList>
+  <MenuList >
        <MenuItem> {orderData.map((order) => (
           <div key={order._id} >   
             {/* <h2>Username: {order.user}</h2> */}
