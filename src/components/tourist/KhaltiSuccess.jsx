@@ -26,17 +26,18 @@ export default function KhaltiSuccess() {
             }
         })
 
-        if(response.status == 200){
+      if(response.status == 200){
             setLoading(false)
             navigate('/homepage')
-            alert("Payment Verified Successfully")
         }
       } catch (error) {
         console.log(error)
       }
+
      }
-      
-        verifyPidx();
+
+     verifyPidx();
+     alert("Payment Verified Successfully")
     },[])
 
     if(loading){
