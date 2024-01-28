@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <div className="main-Footer bg-gray-900 text-white py-12">
+    <div className="main-Footer  relative bg-gray-600 text-white py-12">
       <div className="main-container flex flex-col items-center">
         <div className="main-logo text-3xl mb-6 font-bold">TrekCompanion</div>
         <div className="main-items flex flex-col md:flex-row md:justify-between w-full md:w-4/5 lg:w-3/4">

@@ -50,7 +50,7 @@ export default function UserSignup() {
                   <input type="password" id="password" name="password" required className="w-full p-2 border border-gray-300 rounded-md"/>
                </div>
                <div className="mb-5">
-                  <input type="submit" value="register" className="w-full p-2 bg-teal-700 text-white cursor-pointer hover:bg-teal-800"/>
+                  <input type="submit" value="register" className="w-full p-2 rounded-md bg-teal-700 text-white cursor-pointer hover:bg-teal-800"/>
                </div>
                <input type="hidden" value="tourist" name='role'/>
 
