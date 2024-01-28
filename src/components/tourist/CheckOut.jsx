@@ -73,6 +73,7 @@ const proceedForKhaltiPayment=()=>{
       })
       if(response.status === 200){
         console.log(response.data.message)
+        console.log(response.data.paymentUrl)
         window.location.href = response.data.paymentUrl  //navigate garyo vane url ma paxadi append hune vaera yo alternative gareko ho
       }
 

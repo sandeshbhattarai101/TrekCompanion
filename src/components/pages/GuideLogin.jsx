@@ -7,7 +7,7 @@ export default function GuideLogin() {
    const navigate = useNavigate()
 
    const[userRole, setUserRole] = useState({});
-
+   
    const loginUser = async (e)=>{
        e.preventDefault();
        const formData = new FormData(e.currentTarget)
@@ -22,8 +22,9 @@ export default function GuideLogin() {
 
     if(userRole == "guide"){
       return  navigate("/guide")
+
     }else{
-        return <div className=' text-3xl text-gray-500 font-bold flex justify-center mt-40 '>404 Page not found</div>
+        return <div className=' text-3xl text-gray-500 font-bold flex justify-center mt-40 '></div>
     }
         }
         else if(response.status == 404)
@@ -35,14 +36,15 @@ export default function GuideLogin() {
  // FOR ROLE BASED ROUTING
     
   useEffect(()=>{
+
     const getFormData = async()=>{
       const response = await axios.get('http://localhost:3000/profile',{
         withCredentials : true
       })
       setUserRole(response.data.data.role);
-      // console.log(response.data.data.role)
     }
     getFormData();
+
     
   },[])
 

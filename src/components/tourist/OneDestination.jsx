@@ -10,6 +10,7 @@ const OneDestination = () => {
 
   //Recommendation 
   const [inputValue, setInputValue] = useState('');
+  //const [recommendation, setRecommendation] = useState([]);
   
 
     const handleRecommendation = async () => {
@@ -17,7 +18,8 @@ const OneDestination = () => {
             const response = await axios.get(`http://localhost:3000/recommend?destination=${inputValue}`,{
               withCredentials: true,
             });
-            console.log(response.data);
+           // console.log(response.data);
+           //setRecommendation(response.data.data)
         } catch (error) {
             console.error('Error fetching data:', error);
         }
