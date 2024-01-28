@@ -48,8 +48,8 @@ export default function GuideDashboard() {
 Notification
   </MenuButton>
   <MenuList >
-       <MenuItem> {orderData.map((order) => (
-          <div key={order._id} >   
+       <MenuItem d="flex" flexDir="column" > {orderData.map((order) => (
+          <div className='bg-slate-200 w-[300px] mb-5 p-4  font-semibold ' key={order._id} >   
             {/* <h2>Username: {order.user}</h2> */}
             <h2>Tourist Address: {order.yourCurrentAddress}</h2>
             <h2>PhoneNumber: {order.phoneNumber}</h2>
