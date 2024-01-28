@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AdminDashboard from './admin/adminDashboard';
 import TouristDashboard from './tourist/TouristDashboard';
 import axios from 'axios';
+import GuideDashboard from './guide/guideDashboard';
 
 export default function HomePage() {
 
@@ -24,7 +25,7 @@ export default function HomePage() {
   return (
     <>
     <div>
-       {userRole=="admin"?<AdminDashboard/>:(userRole=="tourist"?<TouristDashboard/>: null )}
+       {userRole=="admin"?<AdminDashboard/>:(userRole=="tourist"?<TouristDashboard/>:(userRole=="guide"?<GuideDashboard/>: null)) }
     </div>
     
     </>

@@ -47,9 +47,9 @@ export default function GuideDashboard() {
   <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
 Notification
   </MenuButton>
-  <MenuList>
-       <MenuItem> {orderData.map((order) => (
-          <div key={order._id} >   
+  <MenuList  >
+       <MenuItem d="flex" flexDir="column"  > {orderData.map((order) => (
+          <div key={order._id} className='bg-slate-200 p-3 font-medium  mb-5 '  >   
             {/* <h2>Username: {order.user}</h2> */}
             <h2>Tourist Address: {order.yourCurrentAddress}</h2>
             <h2>PhoneNumber: {order.phoneNumber}</h2>
